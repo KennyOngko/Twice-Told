@@ -21,6 +21,10 @@
         </style>
     </head>
     <body class="antialiased">
+        @extends('layouts.app')
 
+        @section('content')
+
+        @endsection
     </body>
 </html>
