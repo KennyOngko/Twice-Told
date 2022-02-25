@@ -18,11 +18,44 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        .content-font{
+            font-size: 12pt;
+            padding-left: 80px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+        .footer {
+            clear: both;
+            position: relative;
+            height: 200px;
+            margin-top: -200px;
+        }
+        .footer-bottom {
+            background: white;
+            width: 100vw;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-bottom h4 {
+            font-size: 14px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+        }
+
+        .footer-bottom span {
+            text-transform: uppercase;
+            opacity: .6;
+            font-weight: 200;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="height: 6.25rem;">
+            <div class="container" style="max-width: 90%;">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -32,9 +65,13 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
+                    <ul class="navbar-nav me-auto" style="padding-left: 20%;">
+                        <a class="content-font" href="">About Us</a>
+                        <a class="content-font" href="">Product</a>
+                        <a class="content-font" href="">Forum</a>
+                        <a class="content-font" href="">Help</a>
                     </ul>
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
@@ -78,6 +115,19 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <!-- ============================ Footer Start ================================== -->
+        <footer>
+            <div class="footer-bottom ">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <p class="mb-0">Copyright © 2022 <a href="">Twice-Told</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- ============================ Footer End ================================== -->
     </div>
 </body>
 </html>
