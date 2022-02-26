@@ -11,7 +11,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -19,14 +18,17 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
         .content-font{
             font-size: 12pt;
-            padding-left: 8.25rem;
             font-weight: bold;
             text-decoration: none;
             color: black;
+        }
+        .menu-utama{
+            width: 80%;
+            display: flex;
+            justify-content: space-evenly;
         }
         .footer {
             clear: both;
@@ -36,7 +38,7 @@
         }
         .footer-bottom {
             background: white;
-            width: 100vw;
+            width: 100%;
             padding: 20px 0;
             text-align: center;
         }
@@ -52,11 +54,20 @@
             opacity: .6;
             font-weight: 200;
         }
+        @media (max-width:400px){
+            .content-font{
+                padding-left: 0;
+                margin-left: 0;
+                font-size: 0.85rem;
+                width: 50%;
+            }
+        }
+  
     </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="height: 6.25rem;">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="min-height: 6rem; ">
             <div class="container" style="max-width: 90%;">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -67,16 +78,16 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto" style="padding-left: 5%;">
-                        <a class="content-font" href="">About Us</a>
-                        <a class="content-font" href="">Product</a>
-                        <a class="content-font" href="">Forum</a>
-                        <a class="content-font" href="">Help</a>
+                    <ul class="navbar-nav me-auto menu-utama">
+                        <a class="content-font" style="height: 100%" href="">About Us</a>
+                        <a class="content-font" style="height: 100%" href="">Product</a>
+                        <a class="content-font" style="height: 100%" href="">Forum</a>
+                        <a class="content-font" style="height: 100%" href="">Help</a>
                     </ul>
 
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))

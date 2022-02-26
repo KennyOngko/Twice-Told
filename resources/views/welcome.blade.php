@@ -7,7 +7,7 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
         <!-- Styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -49,18 +49,22 @@
             .dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}
             .dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}
             .dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-        </style>
+        </style> 
 
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
             }
             .content-home1{
-                font-size: 2.125rem;
-                max-width: 100%;
-                padding-top: 2%;
-                padding-bottom: 1%;
+                font-size: 2rem;
                 text-align: center;
+                padding-top: 10px;
+                margin: 2%;
+            }
+
+            section{
+                width: 100%;
+                height: 100%;
             }
             .content-home2{
                 font-size: 1.25rem;
@@ -105,10 +109,10 @@
             box-sizing: border-box;
             }
 
-            section {
+            /* section {
                 width: 100%;
                 min-height: 100vh;
-            }
+            } */
             div{
                 padding: 0;
                 margin: 0;
@@ -184,6 +188,62 @@
             .overflow-scroll::-webkit-scrollbar {
             display: none; /* for Chrome, Safari, and Opera */
             }
+            .card-box-content-section2{
+                width: 18rem;
+            }
+            .box-section-2{
+                    max-width: 50%;
+                }
+            .img-section-2{
+                max-width: 50%;
+            }
+            .box-2-bottom-img{
+                width:100%;
+                height:20rem;
+            }
+            .row{
+                --bs-gutter-x:0.5rem !important;
+            }
+            @media (max-width:400px){
+                section{
+                    min-height:50vh;
+                }
+                .content-home1{
+                    font-size: 18pt;
+                    margin: 2%;
+                }
+                .scroll-down{
+                    bottom: 5px;
+                }
+                h1{
+                    font-size: 12pt !important;
+                    padding: 8%;
+                }
+                h2{
+                    font-size: 10pt !important;
+                }
+                .content-section-2{
+                    flex-direction:column-reverse;
+                }
+                .box-section-2{
+                    max-width: 100%;
+                }
+                .img-section-2{
+                    max-width: 100%;
+                }
+                .content-section-2-card{
+                    justify-content:space-evenly;
+                    width:100%;
+                    flex-wrap:wrap;
+                }
+                .card-box-content-section2{
+                    width: 12rem;
+                }
+                .content-2-img-bottom{
+                    width: 50% !important;
+                    padding: 2px;
+                }
+            }
         </style>
     </head>
     <body class="antialiased">
@@ -196,10 +256,9 @@
                     <span class="sr-only">Loading...</span>
                 </div>
             </div>
-          </div>
-
+        </div>
         <section id="sec-1" style="margin: 0; padding:0;">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="max-height: 39.25rem">
+            <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel" style="max-height: 40.25rem; overflow:hidden; width:100%;">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <a href="" class="container-img" >
@@ -207,15 +266,6 @@
                             <div class="overlay">
                                 <div class="text">More</div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="" class="container-img" >
-                            <img src="img/test.jpg" style="max-height: 40.25rem; width:100%;" class="d-block " alt="...">
-                            <div class="overlay">
-                                <div class="text">More</div>
-                            </div>
-
                         </a>
                     </div>
                     <div class="carousel-item">
@@ -237,82 +287,79 @@
                     </button>
                 </div>
             </div>
-            <p class="content-home1 " >"World has told you once , but i don't maind telling you Twice"</p>
+            <p class="content-home1" >"World has told you once , but i don't maind telling you Twice"</p>
+            {{-- <hr class="break1"> --}}
             <a href="#sec-2"  >
                 <div class="scroll-down"></div>
             </a>
-            {{-- <hr class="break1"> --}}
         </section>
-
+        
         {{-- section dua --}}
         <section id="sec-2">
-                <div class="d-flex justify-content-center" style="max-width: 100%; height:50vh; margin:0; padding:0;">
-                    <div style="max-width: 50%;" class="overflow-scroll">
-                        <div style="max-width: 100%; display: grid; justify-content:center;" >
-                            <div>
-                                <h1 style="text-align:center; padding-bottom:1%; ">Hi, From TWICE - TOLD</h1>
-                            </div>
-                            <div style=" width:100%; display:grid; justify-content:center; padding-left:10%;padding-right:10%">
-                                <h2 style="text-align: justify; font-size:1.5rem; width:100%;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam dolorem vero omnis,
-                                    autem eos aliquam magnam eum iusto laborum. Beatae rerum ratione aut maxime nulla praesentium sunt architecto laudantium tenetur? Lorem ipsum dolor,
-                                    sit amet consectetur adipisicing elit. Cumque vitae labore nisi dolor error esse consequatur
-                                    molestias eos harum numquam, nobis, enim nesciunt quam earum fuga necessitatibus. Necessitatibus, iure minus. Lorem ipsum dolor sit amet consectetur
-                                     adipisicing elit. Sed, debitis assumenda! Dolorum delectus quaerat quia,
-                                    aspernatur eos repellendus quis harum neque voluptate tempore, ut molestiae obcaecati ad, aliquid quae similique.
-                                </h2>
-                            </div>
+            <div class="d-flex justify-content-center content-section-2" style="width: 100%">
+                <div class="overflow-scroll box-section-2">
+                        <div>
+                            <h1 style="text-align:center; padding-bottom:1%; ">Hi, From TWICE - TOLD</h1>
                         </div>
-                    </div>
-                    <div style="max-width: 50%;"><img style="width: 100%; height:100%; " src="img/test.jpg" alt=""></div>
+                        <div style="  padding-left:10%;padding-right:10%">
+                            <h2 style="text-align: justify; font-size:1.5rem; width:100%;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam dolorem vero omnis,
+                                autem eos aliquam magnam eum iusto laborum. Beatae rerum ratione aut maxime nulla praesentium sunt architecto laudantium tenetur? Lorem ipsum dolor,
+                                sit amet consectetur adipisicing elit. Cumque vitae labore nisi dolor error esse consequatur
+                                molestias eos harum numquam, nobis, enim nesciunt quam earum fuga necessitatibus. Necessitatibus, iure minus. Lorem ipsum dolor sit amet consectetur
+                                 adipisicing elit. Sed, debitis assumenda! Dolorum delectus quaerat quia,
+                                aspernatur eos repellendus quis harum neque voluptate tempore, ut molestiae obcaecati ad, aliquid quae similique.
+                            </h2>
+                        </div>
+        
                 </div>
-                <hr style="margin-top:0; color:black;">
-                <div style=" display:flex; gap:10rem; justify-content:center; width: 100%; padding-bottom:1%;" >
-                    <div class="card " style="width: 18rem; height: 10rem">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                          <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
+                <div class="img-section-2"><img style="width: 100%; height:100%; " src="img/test.jpg" alt=""></div>
+            </div>
+            <hr style="margin-top:0; color:black;">
+            <div style=" display:flex; justify-content:space-evenly; width: 100%; padding-bottom:1%;" class="content-section-2-card" >
+                <div class="card card-box-content-section2" >
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
-                <hr style="margin-top:0; color:black;">
-                <div style="display: flex; justify-content:center;" class="content-home2">
-                    <p>Take a look from our instagram</p>
-                </div>
-                <div style="display: flex; justify-content:center; margin-top:0;" class="content-home2">
-                    <p>@twicetold.kids #twicetold</p>
-                </div>
-                <div style=" display:flex; gap:2rem; justify-content:center; width: 100%; padding-bottom:1%;" >
-                    <div class="card" style="width: 20rem; height:20rem;">
-                        <img src="img/test.jpg" style="width: 20rem; height:20rem; object-fit: cover;" class="card-img-top" alt="...">
-                    </div>
-                    <div class="card" style="width: 20rem; height:20rem;">
-                        <img src="img/test.jpg" style="width: 20rem; height:20rem; object-fit: cover;" class="card-img-top" alt="...">
-                    </div>
-                    <div class="card" style="width: 20rem; height:20rem;">
-                        <img src="img/test.jpg" style="width: 20rem; height:20rem; object-fit: cover;" class="card-img-top" alt="...">
-                    </div>
-                    <div class="card" style="width: 20rem; height:20rem;">
-                        <img src="img/test.jpg" style="width: 20rem; height:20rem; object-fit: cover;" class="card-img-top" alt="...">
-                    </div>
-                    <div class="card" style="width: 20rem; height:20rem;">
-                        <img src="img/test.jpg" style="width: 20rem; height:20rem; object-fit: cover;" class="card-img-top" alt="...">
+                <div class="card card-box-content-section2" >
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
-        </section>
+                <div class="card card-box-content-section2" >
+                    <div class="card-body">
+                      <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card card-box-content-section2">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin-top:0; color:black;">
+            <div style="display: flex; justify-content:center;" class="content-home2">
+                <p>Take a look from our instagram</p>
+            </div>
+            <div style="display: flex; justify-content:center; margin-top:0;" class="content-home2">
+                <p>@twicetold.kids #twicetold</p>
+            </div>
+
+            <div class="row " style="width: 100%; padding-left:10px;">
+                <div class="col-sm-3 content-2-img-bottom">
+                    <img src="img/test.jpg" style="width: 100%; height:100%; " alt="...">
+                </div>
+                <div class="col-sm-3 content-2-img-bottom" >
+                    <img src="img/test.jpg" style="width: 100%; height:100%; " alt="...">
+                </div>
+                <div class="col-sm-3 content-2-img-bottom" >
+                    <img src="img/test.jpg" style="width: 100%; height:100%; " alt="...">
+                </div>
+                <div class="col-sm-3 content-2-img-bottom" >
+                    <img src="img/test.jpg" style="width: 100%; height:100%; " alt="...">
+                </div>
+            </div>
+    </section>
 
         @endsection
     </body>

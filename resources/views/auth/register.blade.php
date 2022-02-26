@@ -43,7 +43,7 @@
                             <label for="phone_number" class="col-md-4 col-form-label text-md-end">{{ __('Phone Number') }}</label>
 
                             <div class="col-md-6">
-                                <input id="phone_number" type="phone_number" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old('phone_number') }}" required autocomplete="number">
+                                <input id="phone_number" type="text" class="form-control @error('phone_number') is-invalid @enderror"  autocomplete="off" name="phone_number" value="{{ old('phone_number') }}">
 
                                 @error('phone_number')
                                     <span class="invalid-feedback" role="alert">
@@ -88,4 +88,28 @@
         </div>
     </div>
 </div>
+<script>
+	function setInputFilter(textbox, inputFilter) {
+                ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
+                    textbox.addEventListener(event, function() {
+                        if (inputFilter(this.value)) {
+                            this.oldValue = this.value;
+                            this.oldSelectionStart = this.selectionStart;
+                            this.oldSelectionEnd = this.selectionEnd;
+                        } else if (this.hasOwnProperty("oldValue")) {
+                            this.value = this.oldValue;
+                            this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                        } else {
+                            this.value = "";
+                        }
+                    });
+                });
+            }
+           
+	setInputFilter(document.getElementById(`phone_number`), function(value) {
+		return /^\d*$/.test(value); // Allow digits and '.' only, using a RegExp
+	});
+</script>
 @endsection
+
+
