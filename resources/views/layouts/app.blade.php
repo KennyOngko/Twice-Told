@@ -14,7 +14,7 @@
     <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -62,14 +62,17 @@
                 width: 50%;
             }
         }
-  
+        .navbar{
+            background-color: #D2B48C !important;
+             
+        }
     </style>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="min-height: 6rem; ">
-            <div class="container" style="max-width: 90%;">
-                <a class="navbar-brand" href="{{ url('/') }}">
+    <div id="app" style="font-family: custom-font !important; background-color: #F5F3F0 !important; ">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm " style="min-height: 6rem; ">
+            <div class="container" style="max-width: 100%;">
+                <a class="navbar-brand" style="color: #FFFFFF;" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -79,10 +82,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto menu-utama">
-                        <a class="content-font" style="height: 100%" href="">About Us</a>
-                        <a class="content-font" style="height: 100%" href="">Product</a>
-                        <a class="content-font" style="height: 100%" href="">Forum</a>
-                        <a class="content-font" style="height: 100%" href="">Help</a>
+                        <a class="content-font" style="height: 100%; color: #FFFFFF;" href="">About Us</a>
+                        <a class="content-font" style="height: 100%; color: #FFFFFF;" href="">Product</a>
+                        <a class="content-font" style="height: 100%; color: #FFFFFF;" href="">Forum</a>
+                        <a class="content-font" style="height: 100%; color: #FFFFFF;" href="">Help</a>
                     </ul>
 
 
@@ -92,18 +95,18 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" style="color: #FFFFFF;" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" style="color: #FFFFFF;" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: #FFFFFF;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
@@ -125,7 +128,7 @@
             </div>
         </nav>
 
-        <main class="py-4 px-0">
+        <main >
             @yield('content')
         </main>
         <!-- ============================ Footer Start ================================== -->

@@ -7,7 +7,6 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
         <!-- Styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -52,6 +51,10 @@
         </style> 
 
         <style>
+              @font-face {
+                src: url('/fonts/Cardo-Regular.ttf');
+                font-family: "custom-font";
+            }
             body {
                 font-family: 'Nunito', sans-serif;
             }
@@ -244,6 +247,7 @@
                     padding: 2px;
                 }
             }
+      
         </style>
     </head>
     <body class="antialiased">
@@ -262,7 +266,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <a href="" class="container-img" >
-                            <img src="img/test.jpg" style="max-height: 40.25rem; width:100%;" class="d-block" alt="...">
+                            <img src="img/test4.jpg" style="max-height: 40.25rem; width:100%; object-fit:cover;" class="d-block" alt="...">
                             <div class="overlay">
                                 <div class="text">More</div>
                             </div>
@@ -287,7 +291,7 @@
                     </button>
                 </div>
             </div>
-            <p class="content-home1" >"World has told you once , but i don't maind telling you Twice"</p>
+            <p class="content-home1" style="padding-bottom:10px; ">"World has told you once , but i don't mind telling you Twice"</p>
             {{-- <hr class="break1"> --}}
             <a href="#sec-2"  >
                 <div class="scroll-down"></div>
