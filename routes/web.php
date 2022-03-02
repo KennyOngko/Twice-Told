@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get('/about_us', [App\Http\Controllers\aboutController::class, 'about_us'])->name('about_us');
 
 Route::get('/product', [App\Http\Controllers\productController::class, 'getdataProduct'])->name('product');
-
+Route::get('/product_details', [App\Http\Controllers\productController::class, 'getdataProduct'])->name('product_details');
 Auth::routes();
 Route::group(['middleware'=>'member'], function() {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

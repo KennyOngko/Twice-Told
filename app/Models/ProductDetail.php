@@ -10,9 +10,9 @@ use App\Models\Product;
 class ProductDetail extends Model
 {
     use HasFactory;
-    protected $fillable = ['product_id', 'color', 'size'];
+    // protected $fillable = ['product_id', 'color', 'size'];
     
-    public function Product(){
-        return $this->belongsTo(Product::class);
-    }
+    // public function Product(){
+    //     return $this->belongsTo(Product::class);
+    // }
 }

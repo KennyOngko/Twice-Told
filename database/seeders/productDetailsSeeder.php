@@ -13,16 +13,16 @@ class productDetailsSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('product_details')->insert([
-            ["product_id"=>'1', "color"=>'white','size'=>'S'],
-            ["product_id"=>'1', "color"=>'blue','size'=>'S'],
-            ["product_id"=>'1', "color"=>'red','size'=>'S'],
-            ["product_id"=>'1', "color"=>'white','size'=>'M'],
-            ["product_id"=>'1', "color"=>'blue','size'=>'M'],
-            ["product_id"=>'1', "color"=>'red','size'=>'M'],
-            ["product_id"=>'1', "color"=>'white','size'=>'L'],
-            ["product_id"=>'1', "color"=>'blue','size'=>'L'],
-            ["product_id"=>'1', "color"=>'red','size'=>'L'],
-        ]);
+        // DB::table('product_details')->insert([
+        //     ["product_id"=>'1', "color"=>'white','size'=>'S'],
+        //     ["product_id"=>'1', "color"=>'blue','size'=>'S'],
+        //     ["product_id"=>'1', "color"=>'red','size'=>'S'],
+        //     ["product_id"=>'1', "color"=>'white','size'=>'M'],
+        //     ["product_id"=>'1', "color"=>'blue','size'=>'M'],
+        //     ["product_id"=>'1', "color"=>'red','size'=>'M'],
+        //     ["product_id"=>'1', "color"=>'white','size'=>'L'],
+        //     ["product_id"=>'1', "color"=>'blue','size'=>'L'],
+        //     ["product_id"=>'1', "color"=>'red','size'=>'L'],
+        // ]);
     }
 }
