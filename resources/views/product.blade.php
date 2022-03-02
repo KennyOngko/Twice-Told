@@ -99,8 +99,21 @@
                 font-size: 1rem;
             }
         }
+        .card-img-top{
+            height: 20rem;
+        }
+        .outer-product-box{
+            display: flex;
+            justify-content: center;
+        }
+        .inner-product-box{
+            display: flex;
+            width: 90%;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
       </style>
-    <title>About US</title>
+    <title>Product</title>
 </head>
 <body>
     @extends('layouts.app')
@@ -113,20 +126,17 @@
             </div>
         </div>
     </div>
-    <div class="box-outer-about-us">
-        <div class="content-about-us">
-            <h1>Story of Twice Told</h1>
-            <p>
-                Represent a state of being calm, peaceful, and untroubled. Achieving this positive state of mind means you won’t feel as troubled by life’s ups and downs. While addiction often brings chaos, a loss of control, and emotional turmoil, serenity will help you stay calm and true to yourself.            
-            </p>
-            <p>
-                Serene Candle was built to help pamper ourselves, remember the importance of self-love because all activities we do start from ourselves. Self Healing is very important. When our soul & body are healthy, our activities and thoughts will be better.
-            </p>
-            <p>
-                The goal is to make candles / other fragrances for people to relax more & also make the room more aesthetic
-            </p>
+    <div class="outer-product-box" style="width: 100%; padding:25px;">
+        <div class="inner-product-box">
+            <div class="card" style="width: 20rem;">
+                <img src="img/test.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
         </div>
-    </div>
+        </div>
+    </div>    
     @endsection
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

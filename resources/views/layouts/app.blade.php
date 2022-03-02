@@ -30,30 +30,16 @@
             display: flex;
             justify-content: space-evenly;
         }
-        .footer {
-            clear: both;
-            position: relative;
-            height: 200px;
-            margin-top: -200px;
-        }
+
         .footer-bottom {
-            background: white;
+            background-image: url("img/footer.jpg");
+            background-repeat:no-repeat;
+            background-position: center;
+            background-size: cover;
             width: 100%;
-            padding: 20px 0;
             text-align: center;
         }
 
-        .footer-bottom h4 {
-            font-size: 14px;
-            word-spacing: 2px;
-            text-transform: capitalize;
-        }
-
-        .footer-bottom span {
-            text-transform: uppercase;
-            opacity: .6;
-            font-weight: 200;
-        }
         @media (max-width:400px){
             .content-font{
                 padding-left: 0;
@@ -61,15 +47,23 @@
                 font-size: 0.85rem;
                 width: 50%;
             }
+            .button-footer{
+                width: 30% !important;
+            }
+            .footer-content1{
+                font-size: 20pt !important;
+            }
+            .footer-content2{
+                font-size: 10pt !important;
+            }
         }
         .navbar{
-            background-color: #D2B48C !important;
-             
+            background-color: #D2B48C !important;   
         }
     </style>
 </head>
-<body>
-    <div id="app" style="font-family: custom-font !important; background-color: #F5F3F0 !important; ">
+<body style="background-color: #F5F3F0 !important; ">
+    <div id="app " style="font-family: custom-font !important; position: relative; ">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm " style="min-height: 6rem; ">
             <div class="container" style="max-width: 100%;">
                 <a class="navbar-brand" style="color: #FFFFFF;" href="{{ url('/') }}">
@@ -82,8 +76,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto menu-utama">
-                        <a class="content-font" style="height: 100%; color: #FFFFFF;" href="">About Us</a>
-                        <a class="content-font" style="height: 100%; color: #FFFFFF;" href="">Product</a>
+                        <a class="content-font" style="height: 100%; color: #FFFFFF;" href="{{route('about_us')}}">About Us</a>
+                        <a class="content-font" style="height: 100%; color: #FFFFFF;" href="{{route('product')}}">Product</a>
                         <a class="content-font" style="height: 100%; color: #FFFFFF;" href="">Forum</a>
                         <a class="content-font" style="height: 100%; color: #FFFFFF;" href="">Help</a>
                     </ul>
@@ -130,14 +124,35 @@
 
         <main >
             @yield('content')
+
+
         </main>
         <!-- ============================ Footer Start ================================== -->
-        <footer>
+        <footer class="footer">
             <div class="footer-bottom ">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-12 col-md-12 text-center">
-                            <p class="mb-0">Copyright © 2022 <a href="">Twice-Told</a>.</p>
+                            <p class="mb-0 footer-content1" style="font-size: 30pt; color:#F5F3F0;">Plan to buy Our Products</p>
+                        </div>
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <p class="mb-0 footer-content2" style="font-size: 12pt; color:#F5F3F0;">You Can Reach Us If You Are Intersted In Our Product Here</p>
+                        </div>
+                        <div class="col-lg-12 col-md-12 text-center" style="padding-top: 10px; padding-bottom:10px;">
+                            <button style="width:10%; height:3rem; border:none;" class="button-footer">
+                                <a href="" style="text-decoration:none; color:#B48264;">OUR PRODUCT</a>
+                            </button>
+                        </div>
+                        <div class="col-lg-12 col-md-12 text-center" style="padding-top: 10px; padding-bottom:10px;">
+                            <button style="width:9%; height:2.5rem; border:none;" class="button-footer">
+                                <a href=""  style="text-decoration:none; color:#B48264;">OUR SHOPEE</a>
+                            </button>
+                        </div>
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <p class="mb-0 footer-content2" style="color: #F5F3F0;">OR YOU CAN CONTACT US AT</p>
+                        </div>
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <p class="mb-0 footer-content2" style="color: #F5F3F0">Copyright © 2022 <a href="">Twice-Told</a>.</p>
                         </div>
                     </div>
                 </div>

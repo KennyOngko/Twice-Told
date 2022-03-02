@@ -1,7 +1,14 @@
 @extends('layouts.app')
 
+<style>
+    @media (max-width:400px){
+        .register-container{
+            height:70vh !important;
+        }
+    }
+</style>
 @section('content')
-<div class="container">
+<div class="container register-container" style="height: 61.6vh;">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

@@ -19,10 +19,11 @@ Route::get('/', function () {
 });
 
 
+Route::get('/about_us', [App\Http\Controllers\aboutController::class, 'about_us'])->name('about_us');
+
+Route::get('/product', [App\Http\Controllers\productController::class, 'getdataProduct'])->name('product');
 
 Auth::routes();
-
-Route::get('/about_us', [App\Http\Controllers\HomeController::class, 'about_us'])->name('about_us');
 Route::group(['middleware'=>'member'], function() {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     // Route::get('/home', 'HomeController@index')->name('home');

@@ -64,11 +64,6 @@
                 padding-top: 10px;
                 margin: 2%;
             }
-
-            section{
-                width: 100%;
-                height: 100%;
-            }
             .content-home2{
                 font-size: 1.25rem;
                 max-width: 100%;
@@ -246,6 +241,12 @@
                     width: 50% !important;
                     padding: 2px;
                 }
+                .text{
+                    top: 20%;
+                }
+                .img-welcome{
+                    height: 15rem !important;
+                }
             }
       
         </style>
@@ -261,12 +262,13 @@
                 </div>
             </div>
         </div>
-        <section id="sec-1" style="margin: 0; padding:0;">
+        {{-- section 1 --}}
+        <section id="sec-1">
             <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel" style="max-height: 40.25rem; overflow:hidden; width:100%;">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <a href="" class="container-img" >
-                            <img src="img/test4.jpg" style="max-height: 40.25rem; width:100%; object-fit:cover;" class="d-block" alt="...">
+                            <img src="img/test4.jpg" style="height: 40.25rem; width:100%; object-fit:cover;" class="d-block img-welcome" alt="...">
                             <div class="overlay">
                                 <div class="text">More</div>
                             </div>
@@ -274,7 +276,7 @@
                     </div>
                     <div class="carousel-item">
                         <a href="" class="container-img" >
-                            <img src="img/test.jpg" style="max-height: 40.25rem; width:100%;" class="d-block" alt="...">
+                            <img src="img/test.jpg" style="height: 40.25rem; width:100%; object-fit:cover;" class="d-block img-welcome" alt="...">
                             <div class="overlay">
                                 <div class="text">More</div>
                             </div>
@@ -299,7 +301,7 @@
         </section>
         
         {{-- section dua --}}
-        <section id="sec-2">
+        <section id="sec-2" style="padding-bottom:10px; ">
             <div class="d-flex justify-content-center content-section-2" style="width: 100%">
                 <div class="overflow-scroll box-section-2">
                         <div>
@@ -350,8 +352,8 @@
             </div>
 
             <div class="row " style="width: 100%; padding-left:10px;">
-                <div class="col-sm-3 content-2-img-bottom">
-                    <img src="img/test.jpg" style="width: 100%; height:100%; " alt="...">
+                <div class="col-sm-3 content-2-img-bottom" style="object-fit:cover;">
+                    <img src="img/test.jpg" style="width: 100%; height:100%;" alt="...">
                 </div>
                 <div class="col-sm-3 content-2-img-bottom" >
                     <img src="img/test.jpg" style="width: 100%; height:100%; " alt="...">
@@ -363,9 +365,9 @@
                     <img src="img/test.jpg" style="width: 100%; height:100%; " alt="...">
                 </div>
             </div>
-    </section>
+        </section>
 
-        @endsection
+    @endsection
     </body>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
