@@ -14,9 +14,9 @@ class productSeeder extends Seeder
     public function run()
     {
         DB::table('products')->insert([
-            ["product_name"=>'BAJU LV', "description"=>'Baju Yang sangat baik dengan qualitas oke','gambar'=>'img/test.jpg','price'=>1000000],
-            ["product_name"=>'BAJU LV', "description"=>'Baju Yang sangat baik dengan qualitas oke','gambar'=>'img/test.jpg','price'=>1000000],
-            ["product_name"=>'BAJU LV', "description"=>'Baju Yang sangat baik dengan qualitas oke','gambar'=>'img/test.jpg','price'=>1000000],
+            ["product_name"=>'BAJU LV', "description"=>'Baju Yang sangat baik dengan qualitas oke','gambar'=>'img/baju1.jpg','price'=>1000000],
+            ["product_name"=>'BAJU ANJAY', "description"=>'Baju Yang sangat baik dengan qualitas oke','gambar'=>'img/baju1.jpg','price'=>3000000],
+            ["product_name"=>'BAJU WAKANDA', "description"=>'Baju Yang sangat baik dengan qualitas oke','gambar'=>'img/baju1.jpg','price'=>2000000],
         ]);
     }
 }

@@ -91,6 +91,8 @@
                 width: 100%;
                 justify-content: center;
                 padding: 5px;
+                padding-bottom: 20px;
+                padding-top: 20px
             }
             h1{
                 font-size: 2.25rem !important;

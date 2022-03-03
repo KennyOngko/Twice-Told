@@ -12,6 +12,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/ce981c7861.js" crossorigin="anonymous"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
@@ -26,7 +27,7 @@
             color: black;
         }
         .menu-utama{
-            width: 80%;
+            width: 50%;
             display: flex;
             justify-content: space-evenly;
         }
@@ -38,6 +39,30 @@
             background-size: cover;
             width: 100%;
             text-align: center;
+        }
+        .whats-app {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            bottom: 5px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            right: 10px;
+            z-index: 100;
+            display: flex;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+
+        .my-float {
+            margin-top: 10px;
         }
 
         @media (max-width:400px){
@@ -66,7 +91,7 @@
     <div id="app " style="font-family: custom-font !important; position: relative; ">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm " style="min-height: 6rem; ">
             <div class="container" style="max-width: 100%;">
-                <a class="navbar-brand" style="color: #FFFFFF;" href="{{ url('/') }}">
+                <a class="navbar-brand" style="width:12%; text-align:center; color: #FFFFFF;" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -84,7 +109,7 @@
 
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ">
+                    <ul class="navbar-nav " style="width: 10%;">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -123,9 +148,8 @@
         </nav>
 
         <main >
+            <a class="whats-app my-float" target="_blank" title="Chat With Us" href="https://api.whatsapp.com/send?phone=(6281806357228)"><i class="fa-brands fa-whatsapp"></i></a>
             @yield('content')
-
-
         </main>
         <!-- ============================ Footer Start ================================== -->
         <footer class="footer">
@@ -152,7 +176,7 @@
                             <p class="mb-0 footer-content2" style="color: #F5F3F0;">OR YOU CAN CONTACT US AT</p>
                         </div>
                         <div class="col-lg-12 col-md-12 text-center">
-                            <p class="mb-0 footer-content2" style="color: #F5F3F0">Copyright © 2022 <a href="">Twice-Told</a>.</p>
+                            <p class="mb-0 footer-content2" style="color: #F5F3F0">Copyright © 2022 <a style="text-decoration: none; color:#F5F3F0;" href="">Twice-Told</a>.</p>
                         </div>
                     </div>
                 </div>

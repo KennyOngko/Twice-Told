@@ -14,9 +14,19 @@ class productColorSeeder extends Seeder
     public function run()
     {
         DB::table('product_colors')->insert([
-            ["product_id"=>'1', "color"=>'white'],
-            ["product_id"=>'1', "color"=>'blue' ],
-            ["product_id"=>'1', "color"=>'red'  ],
+            ["product_id"=>'1', "color_name"=>'white','color_code'=>''],
+            ["product_id"=>'1', "color_name"=>'blue','color_code'=>''],
+            ["product_id"=>'1', "color_name"=>'red' ,'color_code'=>''],
+            ["product_id"=>'1', "color_name"=>'black' ,'color_code'=>''],
+
+            ["product_id"=>'2', "color_name"=>'yellow','color_code'=>''],
+            ["product_id"=>'2', "color_name"=>'blue','color_code'=>''],
+            ["product_id"=>'2', "color_name"=>'red' ,'color_code'=>''],
+
+
+            ["product_id"=>'3', "color_name"=>'pink','color_code'=>''],
+            ["product_id"=>'3', "color_name"=>'blue','color_code'=>''],
+            ["product_id"=>'3', "color_name"=>'red' ,'color_code'=>''],
         ]);
     }
 }
