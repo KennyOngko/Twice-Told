@@ -171,10 +171,10 @@
 <script>
     $(document).ready(function(){
     $(".preloader").fadeOut();
-    document.querySelectorAll('.currency').forEach(element => {
-                    console.log(document);
-                    element.innerHTML = accounting.formatMoney(accounting.unformat(element.innerHTML, ","), "Rp. ", 0, ".", ",")
-    });
+        document.querySelectorAll('.currency').forEach(element => {
+                        console.log(document);
+                        element.innerHTML = accounting.formatMoney(accounting.unformat(element.innerHTML, ","), "Rp. ", 0, ".", ",")
+        });
     })
     function rupiahCurrencyFormat(){
         document.querySelector('.currency')

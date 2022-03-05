@@ -91,6 +91,8 @@
                 width: 100%;
                 justify-content: center;
                 padding: 5px;
+                padding-bottom: 20px;
+                padding-top: 20px
             }
             h1{
                 font-size: 2.25rem !important;
@@ -98,124 +100,11 @@
             p{
                 font-size: 1rem;
             }
-            .carousel-indicators li{
-                height: 70px !important;
+            .imagesize{
+                padding-top: 20%;
+                padding-bottom: 45%;
+                width:100%;
             }
-            #custCarousel .carousel-indicators>li{
-                width: 18% !important;
-            }
-            .carousel-item img{
-                width: 70% !important;
-                object-fit: cover !important;
-            }
-            .outer-border{
-                flex-direction:column !important;   
-            }
-
-            .product-name{
-                padding-left: 10%;
-                font-size: 1.5rem !important; 
-            }
-            .currency{
-                padding-top: 2%;
-                padding-left: 10%;
-            }
-            .deskripsi{
-                padding-top: 2%;
-                padding-left: 10%;
-                text-decoration: underline;
-            }
-            .deskripsi-content{
-                width: 90%;
-                text-align: justify;
-                padding-left: 10%;
-            }
-            .botom-foto{
-                width:70% !important;
-            }
-            .carousel-indicators{
-                width: 100%
-            }
-            .box-slider{
-                width: 100% !important;
-            }
-            .color-title{
-                padding-left: 10%;
-            }
-            .color-box{
-                padding-left: 10%;
-            }
-            .img-fluid{
-                height: 80px !important;
-            }
-        }
-
-        .carousel-inner img {
-            width: 100%;
-            height: 100%
-        }
-
-        #custCarousel .carousel-indicators {
-            position: static;
-
-        }
-
-        #custCarousel .carousel-indicators>li {
-            width: 100px
-        }
-
-        #custCarousel .carousel-indicators li img {
-            display: block;
-            opacity: 0.5
-        }
-
-        #custCarousel .carousel-indicators li.active img {
-            opacity: 1
-        }
-
-        #custCarousel .carousel-indicators li:hover img {
-            opacity: 0.75
-        }
-
-        .carousel-item img {
-            width: 50%;
-        }
-        .outer-border{
-            display: flex;
-            justify-content: center;
-            max-width: 100%;
-            padding-top:4%;
-        }
-        .img-fluid{
-            width:100%;
-            height: 150px ;
-            height: auto; 
-            object-fit: cover;
-        }
-        .carousel-indicators{
-            margin: 0 !important;
-            padding-bottom: 1rem !important;
-        }
-        .box-slider{
-            width:30%;
-        }
-        .box-diskripsi{
-            padding-top: 5%;
-        }
-        .list-inline-item{
-            width: 20%;
-        }
-        .color-title{
-            font-size: 1.8rem;
-        }
-        .currency{
-            font-size: 2rem;
-        }
-        .deskripsi{
-            font-size: 1.8rem;
-        }
-        .deskripsi-content{
-            font-size: 14pt;
         }
       </style>
     <title>About US</title>
@@ -231,71 +120,17 @@
             </div>
         </div>
     </div>
-    <div class="outer-border">
-        <div class="box-slider">
-                     <div id="custCarousel" class="carousel slide" data-interval="false" align="center">
-                        <!-- slides -->
-                        <div class="carousel-inner">
-                            @foreach ($productDetail as $value )
-                                <div class="carousel-item active"> <img style="object-fit: cover; height:400px;" src="{{$value->gambar}}"alt=""> </div>
-                                @foreach ($value->dataimage as $valuegambar )
-                                    <div class="carousel-item"> <img style="object-fit: cover; height:400px;" src="{{$valuegambar->product_detail_picture}}" alt=""> </div>  
-                                @endforeach 
-                            @endforeach
-                        </div> 
-                        <div class="carousel-indicators list-inline botom-foto" style="padding-top:10px; width:100%;">
-                            @foreach ($productDetail as $key => $value )
-                            <div class="list-inline-item active"> <a id="carousel-selector-0" style="height: 100px;" class="selected" data-slide-to="0" data-target="#custCarousel"> <img src="{{$value->gambar}}"  class="img-fluid"> </a></div>
-                                @foreach ($value->dataimage as $key => $valuegambar )
-                                    <div class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="{{$key+1}}" data-target="#custCarousel"> <img src="{{$valuegambar->product_detail_picture}}"  class="img-fluid"> </a> </div>
-                                @endforeach
-                            @endforeach
-                        </div>
-                    </div>
-        </div>
-        <div class="box-diskripsi">
-            @foreach ( $productDetail as $value)
-                <h1 class="product-name">{{$value->product_name}}</h1>
-                <h5 class="currency">{{$value->price}}</h5>
-                <h6 class="color-title" style="padding-top:2%; ">Available Color</h6>
-                <div class="color-box" style="display: flex; gap:0.25rem; padding-bottom:3%;">
-                    @foreach ($value->datacolor as $warna)
-                            <div style="border:solid 1px; background-color:{{$warna->color_name}}; width:25px; height:25px;"></div>
-                    @endforeach
-                </div>
-                <h6 class="color-title" style="padding-top:2%; ">Available Size</h6>
-                <div class="color-box" style="display: flex; gap:0.25rem; padding-bottom:3%;">
-                    @foreach ($value->datasize as $size)
-                            <div style="border:solid 1px; width:25px; height:25px; text-align:center;">{{$size->size}}</div>
-                    @endforeach
-                </div>
-                <h4 class="deskripsi">Description</h4>
-                <p class="deskripsi-content">{{$value->description}}</p>
-            @endforeach
-        </div>
+    <div style="display: flex; justify-content:center">
+        <img class="imagesize" src="img/size.png" alt="">
     </div>
-
-
-    
     @endsection
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="{{asset('js/accounting.min.js')}}"></script>
 <script>
     $(document).ready(function(){
     $(".preloader").fadeOut();
-    document.querySelectorAll('.currency').forEach(element => {
-                    console.log(document);
-                    element.innerHTML = accounting.formatMoney(accounting.unformat(element.innerHTML, ","), "Rp. ", 0, ".", ",")
-    });
     })
-
-    $('.carousel').carousel({
-        interval: false,
-    });
-
-    rupiahCurrencyFormat();
 </script>
 </html>

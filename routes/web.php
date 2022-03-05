@@ -23,6 +23,8 @@ Route::get('/about_us', [App\Http\Controllers\aboutController::class, 'about_us'
 
 Route::get('/product', [App\Http\Controllers\productController::class, 'getdataProduct'])->name('product'); 
 Route::get('/product_details', [App\Http\Controllers\productController::class, 'getdatadetailsproduct'])->name('product_details');
+Route::get('/size_guide', [App\Http\Controllers\sizeController::class, 'sizingpage'])->name('sizing_guide');
+Route::get('/shipping', [App\Http\Controllers\shippingController::class, 'shippingpage'])->name('shipping');
 Auth::routes();
 Route::group(['middleware'=>'member'], function() {
 

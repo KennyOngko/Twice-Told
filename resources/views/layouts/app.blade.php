@@ -25,6 +25,7 @@
             font-weight: bold;
             text-decoration: none;
             color: black;
+            align-self: center;
         }
         .menu-utama{
             width: 50%;
@@ -81,9 +82,23 @@
             .footer-content2{
                 font-size: 10pt !important;
             }
+            .phone-number{
+                font-size: 12pt !important;
+                text-align: center !important;
+            }
         }
         .navbar{
             background-color: #D2B48C !important;   
+        }
+        .footer-phone{
+            font-size: 20pt;
+        }
+        .footer-phone:hover{
+            color:#D2B48C !important;
+            
+        }
+        .dropdown-item:hover, .dropdown-item:focus{
+            background-color: #B48264 !important;
         }
     </style>
 </head>
@@ -101,10 +116,23 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto menu-utama">
-                        <a class="content-font" style="height: 100%; color: #FFFFFF;" href="{{route('about_us')}}">About Us</a>
-                        <a class="content-font" style="height: 100%; color: #FFFFFF;" href="{{route('product')}}">Product</a>
-                        <a class="content-font" style="height: 100%; color: #FFFFFF;" href="">Forum</a>
-                        <a class="content-font" style="height: 100%; color: #FFFFFF;" href="">Help</a>
+                        <a class="content-font" style="color: #FFFFFF;" href="{{route('about_us')}}">About Us</a>
+                        <a class="content-font" style="color: #FFFFFF;" href="{{route('product')}}">Product</a>
+                        <a class="content-font" style="color: #FFFFFF;" href="">Forum</a>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle content-font" style=" color: #FFFFFF;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help</a>
+                            <div class="dropdown-menu dropdown-menu-end" style="background-color: #735240;"  aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" style="text-align:center; color: #FFFFFF; " href="{{ route('sizing_guide') }}">
+                                    Sizing Guide
+                                </a>
+                                <a class="dropdown-item" style="text-align:center; color: #FFFFFF;" href="{{ route('shipping') }}">
+                                    Shipping & Delivery
+                                </a>
+                                <a class="dropdown-item" style="text-align:center; color: #FFFFFF;" href="{{ route('sizing_guide') }}">
+                                    Return Policy
+                                </a>
+                            </div>
+                        </li>
                     </ul>
 
 
@@ -174,6 +202,9 @@
                         </div>
                         <div class="col-lg-12 col-md-12 text-center">
                             <p class="mb-0 footer-content2" style="color: #F5F3F0;">OR YOU CAN CONTACT US AT</p>
+                        </div>
+                        <div class="col-lg-12 col-md-12 text-center">
+                            <a class="phone-number" href="tel:085813600655" title="Click to call" class="mb-0 footer-phone" style="color: #F5F3F0;"><i class="fa-solid fa-phone">&nbsp;&nbsp;+62-85-813-600-655</i></a>
                         </div>
                         <div class="col-lg-12 col-md-12 text-center">
                             <p class="mb-0 footer-content2" style="color: #F5F3F0">Copyright © 2022 <a style="text-decoration: none; color:#F5F3F0;" href="">Twice-Told</a>.</p>
