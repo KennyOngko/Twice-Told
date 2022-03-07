@@ -118,7 +118,7 @@
                     <ul class="navbar-nav me-auto menu-utama">
                         <a class="content-font" style="color: #FFFFFF;" href="{{route('about_us')}}">About Us</a>
                         <a class="content-font" style="color: #FFFFFF;" href="{{route('product')}}">Product</a>
-                        <a class="content-font" style="color: #FFFFFF;" href="">Forum</a>
+                        <a class="content-font" style="color: #FFFFFF;" href="{{route('discussion_list')}}">Forum</a>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle content-font" style=" color: #FFFFFF;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help</a>
                             <div class="dropdown-menu dropdown-menu-end" style="background-color: #735240;"  aria-labelledby="navbarDropdown">

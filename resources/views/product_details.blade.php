@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+      <link rel="dns-prefetch" href="//fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+      <!-- Scripts -->
+      <script src="{{ asset('js/app.js') }}" defer></script>
+      <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+      <script src="https://kit.fontawesome.com/ce981c7861.js" crossorigin="anonymous"></script>
       <!-- Styles -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <style>
           /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
           html{line-height:1.15;-webkit-text-size-adjust:100%}
@@ -61,7 +71,7 @@
             width: 50%;
         }
         h1{
-            font-size: 3.25rem !important;
+            font-size: 2rem !important;
         }
         p{
             font-size: 1.25rem;
@@ -93,7 +103,7 @@
                 padding: 5px;
             }
             h1{
-                font-size: 2.25rem !important;
+                font-size: 1.25 !important;
             }
             p{
                 font-size: 1rem;
@@ -134,7 +144,8 @@
                 width:70% !important;
             }
             .carousel-indicators{
-                width: 100%
+                width: 100%;
+                flex-direction: row !important;
             }
             .box-slider{
                 width: 100% !important;
@@ -148,6 +159,10 @@
             .img-fluid{
                 height: 80px !important;
             }
+            #custCarousel .carousel-indicators {
+                position: static;
+
+            }
         }
 
         .carousel-inner img {
@@ -155,10 +170,6 @@
             height: 100%
         }
 
-        #custCarousel .carousel-indicators {
-            position: static;
-
-        }
 
         #custCarousel .carousel-indicators>li {
             width: 100px
@@ -185,31 +196,34 @@
             justify-content: center;
             max-width: 100%;
             padding-top:4%;
+            padding-bottom: 0.5rem;
         }
         .img-fluid{
             width:100%;
-            height: 150px ;
-            height: auto; 
-            object-fit: cover;
+            height: 100px;;
+            object-fit: contain;
+            padding-bottom: 5px;
         }
         .carousel-indicators{
             margin: 0 !important;
             padding-bottom: 1rem !important;
+            bottom: -16px;
+            left: -90px;
         }
         .box-slider{
             width:30%;
         }
         .box-diskripsi{
-            padding-top: 5%;
+
         }
         .list-inline-item{
             width: 20%;
         }
         .color-title{
-            font-size: 1.8rem;
+            font-size: 1.5rem;
         }
         .currency{
-            font-size: 2rem;
+            font-size: 1.25rem;
         }
         .deskripsi{
             font-size: 1.8rem;
@@ -217,37 +231,186 @@
         .deskripsi-content{
             font-size: 14pt;
         }
+        .content-font{
+            font-size: 12pt;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            align-self: center;
+        }
+        .menu-utama{
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .footer-bottom {
+            background-image: url("img/footer.jpg");
+            background-repeat:no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            text-align: center;
+        }
+        .whats-app {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            bottom: 5px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            right: 10px;
+            z-index: 100;
+            display: flex;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+
+        .my-float {
+            margin-top: 10px;
+        }
+
+        @media (max-width:400px){
+            .content-font{
+                padding-left: 0;
+                margin-left: 0;
+                font-size: 0.85rem;
+                width: 50%;
+            }
+            .button-footer{
+                width: 30% !important;
+            }
+            .footer-content1{
+                font-size: 20pt !important;
+            }
+            .footer-content2{
+                font-size: 10pt !important;
+            }
+            .phone-number{
+                font-size: 12pt !important;
+                text-align: center !important;
+            }
+        }
+        .navbar{
+            background-color: #D2B48C !important;   
+        }
+        .footer-phone{
+            font-size: 20pt;
+        }
+        .footer-phone:hover{
+            color:#D2B48C !important;
+            
+        }
+        .dropdown-item:hover, .dropdown-item:focus{
+            background-color: #B48264 !important;
+        }
       </style>
     <title>About US</title>
 </head>
 <body>
-    @extends('layouts.app')
+    <nav class="navbar navbar-expand-md navbar-light shadow-sm " style="min-height: 6rem; ">
+        <div class="container" style="max-width: 100%;">
+            <a class="navbar-brand" style="width:12%; text-align:center; color: #FFFFFF;" href="{{ url('/') }}">
+                {{ config('app.name', 'Laravel') }}
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    @section('content')
-    <div class="preloader">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav me-auto menu-utama">
+                    <a class="content-font" style="color: #FFFFFF;" href="{{route('about_us')}}">About Us</a>
+                    <a class="content-font" style="color: #FFFFFF;" href="{{route('product')}}">Product</a>
+                    <a class="content-font" style="color: #FFFFFF;" href="{{route('discussion_list')}}">Forum</a>
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle content-font" style=" color: #FFFFFF;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help</a>
+                        <div class="dropdown-menu dropdown-menu-end" style="background-color: #735240;"  aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" style="text-align:center; color: #FFFFFF; " href="{{ route('sizing_guide') }}">
+                                Sizing Guide
+                            </a>
+                            <a class="dropdown-item" style="text-align:center; color: #FFFFFF;" href="{{ route('shipping') }}">
+                                Shipping & Delivery
+                            </a>
+                            <a class="dropdown-item" style="text-align:center; color: #FFFFFF;" href="{{ route('sizing_guide') }}">
+                                Return Policy
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav " style="width: 10%;">
+                    <!-- Authentication Links -->
+                    @guest
+                        @if (Route::has('login'))
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: #FFFFFF;" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                        @endif
+
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: #FFFFFF;" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: #FFFFFF;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    {{-- <div class="preloader">
         <div class="loading">
             <div class="spinner-grow" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div class="outer-border">
         <div class="box-slider">
                      <div id="custCarousel" class="carousel slide" data-interval="false" align="center">
                         <!-- slides -->
                         <div class="carousel-inner">
                             @foreach ($productDetail as $value )
-                                <div class="carousel-item active"> <img style="object-fit: cover; height:400px;" src="{{$value->gambar}}"alt=""> </div>
+                                <div class="carousel-item active"> <img style="object-fit: contain; width:100%; height:400px;" src="{{$value->gambar}}"alt=""> </div>
                                 @foreach ($value->dataimage as $valuegambar )
-                                    <div class="carousel-item"> <img style="object-fit: cover; height:400px;" src="{{$valuegambar->product_detail_picture}}" alt=""> </div>  
+                                    <div class="carousel-item"> <img style="object-fit: contain; width:100%; height:400px;" src="{{$valuegambar->product_detail_picture}}" alt=""> </div>  
                                 @endforeach 
                             @endforeach
                         </div> 
-                        <div class="carousel-indicators list-inline botom-foto" style="padding-top:10px; width:100%;">
+                        <div class="carousel-indicators list-inline botom-foto" style="padding-top:25px; width:25%; flex-direction:column;">
                             @foreach ($productDetail as $key => $value )
-                            <div class="list-inline-item active"> <a id="carousel-selector-0" style="height: 100px;" class="selected" data-slide-to="0" data-target="#custCarousel"> <img src="{{$value->gambar}}"  class="img-fluid"> </a></div>
+                            <div style="width: 100%" class="list-inline-item active"> <a id="carousel-selector-0" style="width: 100%" class="selected" data-slide-to="0" data-target="#custCarousel"> <img src="{{$value->gambar}}"  class="img-fluid"> </a></div>
                                 @foreach ($value->dataimage as $key => $valuegambar )
-                                    <div class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="{{$key+1}}" data-target="#custCarousel"> <img src="{{$valuegambar->product_detail_picture}}"  class="img-fluid"> </a> </div>
+                                    <div style="width: 100%" class="list-inline-item"> <a id="carousel-selector-1" style="width: 100%" data-slide-to="{{$key+1}}" data-target="#custCarousel"> <img src="{{$valuegambar->product_detail_picture}}"  class="img-fluid"> </a> </div>
                                 @endforeach
                             @endforeach
                         </div>
@@ -277,7 +440,7 @@
 
 
     
-    @endsection
+
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -285,17 +448,22 @@
 <script src="{{asset('js/accounting.min.js')}}"></script>
 <script>
     $(document).ready(function(){
-    $(".preloader").fadeOut();
-    document.querySelectorAll('.currency').forEach(element => {
-                    console.log(document);
-                    element.innerHTML = accounting.formatMoney(accounting.unformat(element.innerHTML, ","), "Rp. ", 0, ".", ",")
-    });
+        document.querySelectorAll('.currency').forEach(element => {
+                        console.log(document);
+                        element.innerHTML = accounting.formatMoney(accounting.unformat(element.innerHTML, ","), "Rp. ", 0, ".", ",")
+        });
     })
-
-    $('.carousel').carousel({
-        interval: false,
-    });
-
+    function rupiahCurrencyFormat(){
+        document.querySelector('.currency')
+        console.log( document.querySelector('.currency'));    
+    }
     rupiahCurrencyFormat();
+    
+$('.carousel').carousel({
+    interval: false,
+});
 </script>
+
+
+
 </html>

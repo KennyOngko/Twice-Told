@@ -17,6 +17,7 @@ class ProductImageSeeder extends Seeder
             ["product_id"=>'1','product_detail_picture'=>'img/baju2.jpg' ],
             ["product_id"=>'1','product_detail_picture'=>'img/baju2.jpg' ],
             ["product_id"=>'1','product_detail_picture'=>'img/baju2.jpg' ],
+            
 
             ["product_id"=>'3','product_detail_picture'=>'img/baju2.jpg' ],
             ["product_id"=>'3','product_detail_picture'=>'img/baju2.jpg' ],
