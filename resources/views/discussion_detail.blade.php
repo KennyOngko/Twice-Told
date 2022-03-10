@@ -84,40 +84,81 @@
                     <div class="card-header">Catagory</div>
                     <div class="card-body">
                         <ul class="list-group">
-                            @foreach ($channels as $value)
-                                <li class="list-group-item">{{$value->name}}</li>
-                            @endforeach
+                            {{-- @foreach ($channels as $value) --}}
+                                <li class="list-group-item"></li>
+                            {{-- @endforeach --}}
                         </ul>
                     </div>
                 </div>
             </div>
     
-                <div class=" col-md-8" style="height: 500px; overflow-y:scroll; ">
-                    <div class="d-flex" style="justify-content:flex-end; padding-top:10px;">
-                        <input class="border mb-3 mfliud" style="border-radius:5px; width:50%;" type="text" id="search" placeholder="Search.." name="search">
-                    </div>
-                    @foreach ($discussions as $value )
-                    <div class="card col-md-12 list_diskusi" style="margin-bottom:2%; 0; height:100px; ">
-                        <div class="card-header">
-                            <div class="d-flex justify-content-between align-content-center">
-                                <div>
-                                    <strong class="ml-2 text-uppercase">{{$value->name}}</strong>
-                                </div>
-                    
-                                <div>
-                                    <a href="{{ route('discussion_list') }}"
-                                    class="btn btn-success btn-sm">View</a>
-                                </div>
+            <div class=" col-md-8" style="height: 500px; overflow-y:scroll; ">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-content-center">
+                            <div>
+                                <img style="width: 49px; height: 49px;"
+                                     class="rounded-circle"
+                                     alt="" />
+                                <strong class="ml-2 text-uppercase"></strong>
+                            </div>
+                
+                            <div>
+                                <a href=""
+                                   class="btn btn-success btn-sm">View</a>
                             </div>
                         </div>
-                    
-                        <div id="title_diskusi" class="card-body">
-                            {!! $value->title !!}
+                    </div>
+                
+                    <div class="card-body">
+                        <h1></h1>
+                
+      
+                    </div>
+                </div>
+                
+                {{-- @foreach($replies as $reply) --}}
+                <div class="card my-5">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-content-center">
+                            <div>
+                                <strong class="ml-2 text-uppercase"></strong>
+                            </div>
                         </div>
                     </div>
-                    @endforeach
-                </div> 
-
+                
+                    <div class="card-body">
+                    </div>
+                </div>
+                {{-- @endforeach --}}
+                
+                {{-- {{ $replies->links() }} --}}
+                
+                @auth
+                <div class="card">
+                    <div class="card-header">
+                        Add a reply
+                    </div>
+                
+                    <div class="card-body">
+                        <form action=""
+                              method="post">
+                            @csrf
+                            <input type="hidden"
+                                   name="content"
+                                   id="content">
+                            <trix-editor input="content"></trix-editor>
+                
+                            <button type="submit"
+                                    class="btn btn-success btn-sm my-2">Add Reply</button>
+                        </form>
+                    </div>
+                </div>
+                @else
+                <a href="{{ route('login') }}"
+                   class="btn btn-info">Sign in to add a reply</a>
+                @endauth
+            </div> 
         </div>
     </div> 
 <script>
@@ -130,7 +171,6 @@
 				product.style.display="none";
 			}
 		});
-
 	});
 </script>
 

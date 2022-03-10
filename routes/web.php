@@ -27,6 +27,7 @@ Route::get('/size_guide', [App\Http\Controllers\sizeController::class, 'sizingpa
 Route::get('/shipping', [App\Http\Controllers\shippingController::class, 'shippingpage'])->name('shipping');
 Route::get('/discussion_list',[App\Http\Controllers\DiscustionController::class, 'index'])->name('discussion_list');
 Route::get('/discussion_create',[App\Http\Controllers\DiscustionController::class, 'discussion_create'])->name('discussion_create');
+Route::get('/replies',[App\Http\Controllers\DiscustionController::class, 'replies'])->name('replies');
 Route::put('/makeDiscussion',[App\Http\Controllers\DiscustionController::class, 'makeDiscussion'])->name('makeDiscussion');
 
 Auth::routes();

@@ -106,6 +106,69 @@
                 width:100%;
             }
         }
+
+        .box-outer-about-us{
+            display: flex;
+            width: 70%;
+            justify-content: center;
+            padding-bottom: 3.19%;
+            padding-top: 3.1%;
+        }
+        .content-about-us{
+            
+            width: 50%;
+        }
+        h1{
+            font-size: 3.25rem !important;
+        }
+        p{
+            font-size: 1.25rem;
+        }
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background-color: #fff;
+            }
+            .preloader .loading {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            font: 14px arial;
+        }
+        @media (max-width:400px){
+            .content-about-us{
+                width:80%;
+            }
+            .box-outer-about-us{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                padding: 5px;
+                padding-bottom: 20px;
+                padding-top: 20px
+            }
+            h1{
+                font-size: 2.25rem !important;
+            }
+            p{
+                font-size: 1rem;
+            }
+            .judul-content{
+                font-size: 15pt !important;
+            }
+        }
+        .judul-content{
+            font-size: 30pt;
+        }
+        .content-li{
+            padding: 1%;
+            font-size: 12pt;
+        }
       </style>
     <title>About US</title>
 </head>
@@ -120,8 +183,20 @@
             </div>
         </div>
     </div>
-    <div style="display: flex; justify-content:center">
-        <img class="imagesize" src="img/size.png" alt="">
+    <div style="display: flex; align-items:center; padding-top:5%; flex-direction:column;">
+        <div class="judul-content">RETURN POLICY</div>
+        <div style="display:flex; width:100%; justify-content:center; padding-bottom:2%;">
+                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
+                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
+                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
+        </div>
+        <div class="content-shipping">
+            <ul style="text-align: justify;">
+                <li class="content-li">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit inventore, voluptatem vitae expedita, cumque animi nisi laudantium quas commodi debitis facilis odit. Distinctio, excepturi odio! Quasi eveniet accusamus ut amet.</li>
+                <li class="content-li">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi quam assumenda deleniti sunt mollitia, eveniet sit id dignissimos animi officiis dicta, et debitis at in nesciunt nostrum culpa iure ducimus?</li>
+                <li class="content-li">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, hic, a sapiente atque aut nobis ipsum consequatur temporibus ratione, vel maiores. Nulla quasi reprehenderit atque ut, omnis enim eos sed?</li>
+            </ul>
+        </div>
     </div>
     @endsection
 </body>

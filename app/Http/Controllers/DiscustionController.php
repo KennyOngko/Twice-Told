@@ -49,4 +49,8 @@ class DiscustionController extends Controller
         return redirect('discussion_list');
         session()->flash('success', 'Discussion posted.');
     }
+
+    public function replies(){
+        
+    }
 }

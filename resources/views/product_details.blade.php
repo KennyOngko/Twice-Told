@@ -71,7 +71,7 @@
             width: 50%;
         }
         h1{
-            font-size: 2rem !important;
+            font-size: 1.5rem !important;
         }
         p{
             font-size: 1.25rem;
@@ -163,6 +163,9 @@
                 position: static;
 
             }
+            .carousel-item img {
+                height:300px !important;
+            }
         }
 
         .carousel-inner img {
@@ -188,9 +191,6 @@
             opacity: 0.75
         }
 
-        .carousel-item img {
-            width: 50%;
-        }
         .outer-border{
             display: flex;
             justify-content: center;
@@ -200,7 +200,7 @@
         }
         .img-fluid{
             width:100%;
-            height: 100px;;
+            height: 100px;
             object-fit: contain;
             padding-bottom: 5px;
         }
@@ -208,28 +208,28 @@
             margin: 0 !important;
             padding-bottom: 1rem !important;
             bottom: -16px;
-            left: -90px;
+            left: -105px;
         }
         .box-slider{
             width:30%;
         }
         .box-diskripsi{
-
+            padding-left: 2%;
         }
         .list-inline-item{
             width: 20%;
         }
         .color-title{
-            font-size: 1.5rem;
-        }
-        .currency{
             font-size: 1.25rem;
         }
+        .currency{
+            font-size: 1rem;
+        }
         .deskripsi{
-            font-size: 1.8rem;
+            font-size: 1.5rem;
         }
         .deskripsi-content{
-            font-size: 14pt;
+            font-size: 12pt;
         }
         .content-font{
             font-size: 12pt;
