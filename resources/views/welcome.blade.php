@@ -7,7 +7,9 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
         <!-- Styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <style>
@@ -52,11 +54,12 @@
 
         <style>
               @font-face {
-                src: url('/fonts/Cardo-Regular.ttf');
-                font-family: "custom-font";
+                src: url('/fonts/Hubballi-Regular.ttf');
+                font-family: 'Hubballi', cursive;
+
             }
             body {
-                font-family: 'Nunito', sans-serif;
+                font-family: 'Hubballi', cursive;
             }
             .content-home1{
                 font-size: 2rem;
@@ -91,7 +94,7 @@
             }
 
             .text {
-            color: black;
+            color: white;
             font-size: 5rem;
             position: absolute;
             top: 50%;
@@ -187,13 +190,15 @@
             display: none; /* for Chrome, Safari, and Opera */
             }
             .card-box-content-section2{
-                width: 18rem;
+                width: 18.5rem;
+                background-color: #D2B48C !important;
+                border-radius: 2rem !important;
             }
             .box-section-2{
-                    max-width: 50%;
+                    max-width: 60%;
                 }
             .img-section-2{
-                max-width: 50%;
+                max-width: 40%;
             }
             .box-2-bottom-img{
                 width:100%;
@@ -215,7 +220,7 @@
                 }
                 h1{
                     font-size: 12pt !important;
-                    padding: 8%;
+                    padding-top: 8%;
                 }
                 h2{
                     font-size: 10pt !important;
@@ -247,6 +252,16 @@
                 .img-welcome{
                     height: 15rem !important;
                 }
+                .img-feature{
+                    height: 115px !important;
+                    max-width: 100%;
+                    object-fit: contain;
+                }
+            }
+            .img-feature{
+                height: 175px;
+                max-width: 100%;
+                object-fit: contain;
             }
       
         </style>
@@ -268,17 +283,33 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <a href="" class="container-img" >
-                            <img src="img/test4.jpg" style="height: 40.25rem; width:100%; object-fit:cover;" class="d-block img-welcome" alt="...">
+                            <img src="img/home_page_slider_1.jpg" style="height: 40.25rem; width:100%; object-fit:cover;" class="d-block img-welcome" alt="...">
                             <div class="overlay">
-                                <div class="text">More</div>
+                                <div class="text">MORE</div>
                             </div>
                         </a>
                     </div>
                     <div class="carousel-item">
                         <a href="" class="container-img" >
-                            <img src="img/test.jpg" style="height: 40.25rem; width:100%; object-fit:cover;" class="d-block img-welcome" alt="...">
+                            <img src="img/home page slider 2.jpg" style="height: 40.25rem; width:100%; object-fit:cover;" class="d-block img-welcome" alt="...">
                             <div class="overlay">
-                                <div class="text">More</div>
+                                <div class="text">MORE</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="" class="container-img" >
+                            <img src="img/home page slider 3.jpg" style="height: 40.25rem; width:100%; object-fit:cover;" class="d-block img-welcome" alt="...">
+                            <div class="overlay">
+                                <div class="text">MORE</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="" class="container-img" >
+                            <img src="img/home page slider 4.jpg" style="height: 40.25rem; width:100%; object-fit:cover;" class="d-block img-welcome" alt="...">
+                            <div class="overlay">
+                                <div class="text">MORE</div>
                             </div>
                         </a>
                     </div>
@@ -302,44 +333,50 @@
         
         {{-- section dua --}}
         <section id="sec-2" style="padding-bottom:10px; ">
-            <div class="d-flex justify-content-center content-section-2" style="width: 100%">
+            <div class="d-flex justify-content-center content-section-2" style="width: 100%; align-items:center">
                 <div class="overflow-scroll box-section-2">
-                        <div>
-                            <h1 style="text-align:center; padding-bottom:1%; ">Hi, From TWICE - TOLD</h1>
-                        </div>
                         <div style="  padding-left:10%;padding-right:10%">
-                            <h2 style="text-align: justify; font-size:1.5rem; width:100%;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam dolorem vero omnis,
-                                autem eos aliquam magnam eum iusto laborum. Beatae rerum ratione aut maxime nulla praesentium sunt architecto laudantium tenetur? Lorem ipsum dolor,
-                                sit amet consectetur adipisicing elit. Cumque vitae labore nisi dolor error esse consequatur
-                                molestias eos harum numquam, nobis, enim nesciunt quam earum fuga necessitatibus. Necessitatibus, iure minus. Lorem ipsum dolor sit amet consectetur
-                                 adipisicing elit. Sed, debitis assumenda! Dolorum delectus quaerat quia,
-                                aspernatur eos repellendus quis harum neque voluptate tempore, ut molestiae obcaecati ad, aliquid quae similique.
+                            <h1 style="text-align:justify; padding-bottom:1%; ">Hi, From TWICE-TOLD</h1>
+                        </div>
+                        <div style=" padding-bottom: 2%;  padding-left:10%;padding-right:10%">
+                            <h2 style="text-align: justify; font-size:1.5rem; width:100%;">
+                                Sustainable, soft, safe, comfort with a simple touch of versatile design, that is what we want for our children's clothes. We are uising soft and the best quality material and also gorgeous colors that suit your children, designed to make your day like heavenly blessed. Locally made in Indonesia, ethically made - It is us, TWICE-TOLD. Simple, try it on.
                             </h2>
                         </div>
-        
+                        <div style=" padding-bottom: 2%;  padding-left:10%;padding-right:10%">
+                            <h2 style="text-align: justify; font-size:1.5rem; width:100%;">
+                                Welcome to TWICE-TOLD
+                            </h2>
+                        </div>
+                        <div style=" padding-bottom: 2%;  padding-left:10%;padding-right:10%">
+                            <h2 style="text-align: justify; font-size:1.5rem; width:100%;">
+                                Love, From Us
+                            </h2>
+                        </div>
                 </div>
-                <div class="img-section-2"><img style="width: 100%; height:100%; " src="img/test.jpg" alt=""></div>
+                <div class="img-section-2"><img style="width: 100%; height:100%; " src="img/welcoming.jpg" alt=""></div>
             </div>
             <hr style="margin-top:0; color:black;">
-            <div style=" display:flex; justify-content:space-evenly; width: 100%; padding-bottom:1%;" class="content-section-2-card" >
+            <div style=" display:flex; justify-content:space-evenly; width: 100%; padding-bottom:1%; gap:5px;" class="content-section-2-card" >
                 <div class="card card-box-content-section2" >
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card-body" style="text-align: center;">
+                      <h2>Sustainable Packaging</h2>
+                      <img class="img-feature" src="img/feature 1.jpg"  alt="">
+                      <p class="card-text">We use reusable pouch and cassava polymailer for our packaging</p>
                     </div>
                 </div>
                 <div class="card card-box-content-section2" >
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card-body" style="text-align: center;">              
+                      <h2>Sustainable Material</h2>
+                      <img class="img-feature" src="img/feature 2.png"  alt="">
+                      <p class="card-text">We use Tencel which is very comfortable and safe for children's skin and the environment</p>
                     </div>
                 </div>
                 <div class="card card-box-content-section2" >
-                    <div class="card-body">
-                      <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-                <div class="card card-box-content-section2">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card-body" style="text-align: center;">
+                      <h2>Goodbye Itchy</h2>
+                      <img class="img-feature" src="img/feature 3.png"  alt="">
+                      <p class="card-text ">We put the clothing label outside.So say goodbye to itchy necks and waist.</p>
                     </div>
                 </div>
             </div>
@@ -353,16 +390,16 @@
 
             <div class="row " style="width: 100%; padding-left:10px;">
                 <div class="col-sm-3 content-2-img-bottom" style="object-fit:cover;">
-                    <img src="img/test.jpg" style="width: 100%; height:100%;" alt="...">
+                    <img src="img/ig 1.png" style="width: 100%; height:100%;" alt="...">
                 </div>
                 <div class="col-sm-3 content-2-img-bottom" >
-                    <img src="img/test.jpg" style="width: 100%; height:100%; " alt="...">
+                    <img src="img/ig 2.png" style="width: 100%; height:100%; " alt="...">
                 </div>
                 <div class="col-sm-3 content-2-img-bottom" >
-                    <img src="img/test.jpg" style="width: 100%; height:100%; " alt="...">
+                    <img src="img/ig 3.png" style="width: 100%; height:100%; " alt="...">
                 </div>
                 <div class="col-sm-3 content-2-img-bottom" >
-                    <img src="img/test.jpg" style="width: 100%; height:100%; " alt="...">
+                    <img src="img/ig 4.png" style="width: 100%; height:100%; " alt="...">
                 </div>
             </div>
         </section>

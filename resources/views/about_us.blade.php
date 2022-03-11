@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <!-- Fonts -->
-      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-      <!-- Styles -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <!-- Scripts -->
+      <script src="{{ asset('js/app.js') }}" defer></script>
+      <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+      <script src="https://kit.fontawesome.com/ce981c7861.js" crossorigin="anonymous"></script>
+        <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <style>
           /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
           html{line-height:1.15;-webkit-text-size-adjust:100%}
@@ -100,43 +101,213 @@
             p{
                 font-size: 1rem;
             }
+            .background{
+                background-size: 300% !important;
+                background-position:top !important;
+                height: 88vh !important;
+            }
+        }
+        .background{
+            background-image: url('img/about us.jpg');
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            padding: 0% !important;
+            margin: 0% !important;
+            height: 85.3vh;
+        }
+        .content-font{
+            font-size: 12pt;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            align-self: center;
+        }
+        .menu-utama{
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .footer-bottom {
+            background-image: url("img/footer.jpg");
+            background-repeat:no-repeat;
+            background-size: 100%;
+            width: 100%;
+            text-align: center;
+        }
+        .whats-app {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            bottom: 5px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            right: 10px;
+            z-index: 100;
+            display: flex;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+
+        .my-float {
+            margin-top: 10px;
+        }
+
+        @media (max-width:400px){
+            .content-font{
+                padding-left: 0;
+                margin-left: 0;
+                font-size: 0.85rem;
+                width: 50%;
+            }
+            .button-footer{
+                width: 30% !important;
+            }
+            .footer-content1{
+                font-size: 20pt !important;
+            }
+            .footer-content2{
+                font-size: 10pt !important;
+            }
+            .phone-number{
+                font-size: 12pt !important;
+                text-align: center !important;
+            }
+            .logo{
+                width: 170% !important;
+            }
+        }
+        .navbar{
+            background-color: antiquewhite !important;   
+        }
+        .footer-phone{
+            font-size: 20pt;
+        }
+        .footer-phone:hover{
+            color:#D2B48C !important;
+            
+        }
+        .dropdown-item:hover, .dropdown-item:focus{
+            background-color: #D2B48C  !important;
+        }
+        .logo{
+            width: 50%;
         }
       </style>
     <title>About US</title>
 </head>
-<body>
-    @extends('layouts.app')
 
-    @section('content')
-    <div class="preloader">
+<body>
+    <nav class="navbar navbar-expand-md navbar-light shadow-sm " style="min-height: 6rem; ">
+        <div class="container" style="max-width: 100%;">
+            <a class="navbar-brand" style="width:12%; text-align:center; color: #B48264 ;" href="{{ url('/') }}">
+                <img class="logo" src="img/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav me-auto menu-utama">
+                    <a class="content-font" style="color: #B48264  ;" href="{{route('about_us')}}">ABOUT US</a>
+                    <a class="content-font" style="color: #B48264  ;" href="{{route('product')}}">PRODUCT</a>
+                    <a class="content-font" style="color: #B48264  ;" href="{{route('discussion_list')}}">FORUM</a>
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle content-font" style=" color: #B48264  ;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>HELP</a>
+                        <div class="dropdown-menu dropdown-menu-end" style="background-color: #B48264 ;"  aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" style="text-align:center; color: #ffff  ; " href="{{ route('sizing_guide') }}">
+                                SIZING GUIDE
+                            </a>
+                            <a class="dropdown-item" style="text-align:center; color: #ffff  ;" href="{{ route('shipping') }}">
+                                SHIPPING & DELIVERY
+                            </a>
+                            <a class="dropdown-item" style="text-align:center; color: #ffff  ;" href="{{ route('return_policy') }}">
+                                RETURN POLICY
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav " style="width: 10%;">
+                    <!-- Authentication Links -->
+                    @guest
+                        @if (Route::has('login'))
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: #B48264  ;" href="{{ route('login') }}">{{ __('LOGIN') }}</a>
+                            </li>
+                        @endif
+
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: #B48264  ;" href="{{ route('register') }}">{{ __('REGISTER') }}</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: #B48264  ;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {{-- <div class="preloader">
         <div class="loading">
             <div class="spinner-grow" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
-    </div>
+    </div> --}}
+<div class="background" >
     <div class="box-outer-about-us">
         <div class="content-about-us">
-            <h1>Story of Twice Told</h1>
-            <p>
+            <h1 style="color: white">Story of Twice Told</h1>
+            <p style="color: white">
                 Represent a state of being calm, peaceful, and untroubled. Achieving this positive state of mind means you won’t feel as troubled by life’s ups and downs. While addiction often brings chaos, a loss of control, and emotional turmoil, serenity will help you stay calm and true to yourself.            
             </p>
-            <p>
+            <p style="color: white">
                 Serene Candle was built to help pamper ourselves, remember the importance of self-love because all activities we do start from ourselves. Self Healing is very important. When our soul & body are healthy, our activities and thoughts will be better.
             </p>
-            <p>
+            <p style="color: white">
                 The goal is to make candles / other fragrances for people to relax more & also make the room more aesthetic
             </p>
         </div>
     </div>
-    @endsection
+</div>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script>
-    $(document).ready(function(){
-    $(".preloader").fadeOut();
-    })
+    // $(document).ready(function(){
+    // $(".preloader").fadeOut();
+    // })
 </script>
 </html>

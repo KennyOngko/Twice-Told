@@ -91,6 +91,8 @@
                 width: 100%;
                 justify-content: center;
                 padding: 5px;
+                padding-bottom: 20px;
+                padding-top: 20px
             }
             h1{
                 font-size: 2.25rem !important;
@@ -98,37 +100,77 @@
             p{
                 font-size: 1rem;
             }
-            .col-sm-3{
-                width: 50% !important;
-            }
-            .card-img-top{
-                height: 200px !important;
+            .imagesize{
+                padding-top: 20%;
+                padding-bottom: 45%;
+                width:100%;
             }
         }
-        .outer-product-box{
+
+        .box-outer-about-us{
             display: flex;
+            width: 70%;
             justify-content: center;
+            padding-bottom: 3.19%;
+            padding-top: 3.1%;
         }
-        .inner-product-box{
-            display: flex;
-            width: 90%;
-            gap: 0.5rem;
-            flex-wrap: wrap;
+        .content-about-us{
+            
+            width: 50%;
         }
-        .row{
-            --bs-gutter-y:1rem !important;
-            --bs-gutter-x:3rem !important;
+        h1{
+            font-size: 3.25rem !important;
         }
-        .card-img-top{
-            height: 400px;
-            object-fit: cover;
+        p{
+            font-size: 1.25rem;
         }
-        .card-body{
-            padding-left: 0 !important;
-            margin-left: 1%;
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background-color: #fff;
+            }
+            .preloader .loading {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            font: 14px arial;
+        }
+        @media (max-width:400px){
+            .content-about-us{
+                width:80%;
+            }
+            .box-outer-about-us{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                padding: 5px;
+                padding-bottom: 20px;
+                padding-top: 20px
+            }
+            h1{
+                font-size: 2.25rem !important;
+            }
+            p{
+                font-size: 1rem;
+            }
+            .judul-content{
+                font-size: 15pt !important;
+            }
+        }
+        .judul-content{
+            font-size: 30pt;
+        }
+        .content-li{
+            padding: 1%;
+            font-size: 12pt;
         }
       </style>
-    <title>Product</title>
+    <title>About US</title>
 </head>
 <body>
     @extends('layouts.app')
@@ -141,45 +183,29 @@
             </div>
         </div>
     </div>
-    <div class="container" style="padding-bottom: 3%; padding-top:3%;">
-        <div class="row"> 
-            @foreach ($product as $value)
-            <div class="col-sm-3">
-                <a href="{{route('product_details',['id' => $value->id])}}">
-                    <img src="{{$value->gambar}}" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body">
-                    <h5 class="card-title">{{$value->product_name}}</h5>
-                    <h6 class="currency">{{$value->price}}</h6>
-                    <h6>Available Color</h6>
-                    <div style="display: flex; gap:0.25rem;">
-                        @foreach ($value->datacolor as $warna)
-                                <div style="border:solid 1px; background-color:{{$warna->color_code}}; width:25px; height:25px;"></div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-            @endforeach   
+    <div style="display: flex; align-items:center; padding-top:5%; flex-direction:column;">
+        <div class="judul-content">RETURN POLICY</div>
+        <div style="display:flex; width:100%; justify-content:center; padding-bottom:2%;">
+                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
+                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
+                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
         </div>
-    </div>    
+        <div class="content-shipping">
+            <ul style="text-align: justify;">
+                <li class="content-li">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit inventore, voluptatem vitae expedita, cumque animi nisi laudantium quas commodi debitis facilis odit. Distinctio, excepturi odio! Quasi eveniet accusamus ut amet.</li>
+                <li class="content-li">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi quam assumenda deleniti sunt mollitia, eveniet sit id dignissimos animi officiis dicta, et debitis at in nesciunt nostrum culpa iure ducimus?</li>
+                <li class="content-li">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, hic, a sapiente atque aut nobis ipsum consequatur temporibus ratione, vel maiores. Nulla quasi reprehenderit atque ut, omnis enim eos sed?</li>
+            </ul>
+        </div>
+    </div>
     @endsection
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="{{asset('js/accounting.min.js')}}"></script>
 <script>
     $(document).ready(function(){
     $(".preloader").fadeOut();
-        document.querySelectorAll('.currency').forEach(element => {
-                        console.log(document);
-                        element.innerHTML = accounting.formatMoney(accounting.unformat(element.innerHTML, ","), "Rp. ", 0, ".", ",")
-        });
     })
-    function rupiahCurrencyFormat(){
-        document.querySelector('.currency')
-        console.log( document.querySelector('.currency'));    
-    }
-    rupiahCurrencyFormat();
 </script>
 </html>

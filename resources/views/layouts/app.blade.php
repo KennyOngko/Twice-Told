@@ -14,8 +14,11 @@
     <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
     <script src="https://kit.fontawesome.com/ce981c7861.js" crossorigin="anonymous"></script>
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+    {{-- <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Hubballi" rel="stylesheet"> --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -36,8 +39,7 @@
         .footer-bottom {
             background-image: url("img/footer.jpg");
             background-repeat:no-repeat;
-            background-position: center;
-            background-size: cover;
+            background-size: 100%;
             width: 100%;
             text-align: center;
         }
@@ -86,9 +88,12 @@
                 font-size: 12pt !important;
                 text-align: center !important;
             }
+            .logo{
+                width: 170% !important;
+            }
         }
         .navbar{
-            background-color: #D2B48C !important;   
+            background-color: antiquewhite !important;   
         }
         .footer-phone{
             font-size: 20pt;
@@ -98,16 +103,19 @@
             
         }
         .dropdown-item:hover, .dropdown-item:focus{
-            background-color: #B48264 !important;
+            background-color: #D2B48C  !important;
+        }
+        .logo{
+            width: 50%;
         }
     </style>
 </head>
 <body style="background-color: #F5F3F0 !important; ">
-    <div id="app " style="font-family: custom-font !important; position: relative; ">
+    <div id="app " style="font-family:'Hubballi', cursive !important; position: relative; ">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm " style="min-height: 6rem; ">
             <div class="container" style="max-width: 100%;">
-                <a class="navbar-brand" style="width:12%; text-align:center; color: #FFFFFF;" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand" style="width:12%; text-align:center; color: #B48264 ;" href="{{ url('/') }}">
+                    <img class="logo" src="img/logo.png" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -116,20 +124,20 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto menu-utama">
-                        <a class="content-font" style="color: #FFFFFF;" href="{{route('about_us')}}">About Us</a>
-                        <a class="content-font" style="color: #FFFFFF;" href="{{route('product')}}">Product</a>
-                        <a class="content-font" style="color: #FFFFFF;" href="{{route('discussion_list')}}">Forum</a>
+                        <a class="content-font" style="color: #B48264  ;" href="{{route('about_us')}}">ABOUT US</a>
+                        <a class="content-font" style="color: #B48264  ;" href="{{route('product')}}">PRODUCT</a>
+                        <a class="content-font" style="color: #B48264  ;" href="{{route('discussion_list')}}">FORUM</a>
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle content-font" style=" color: #FFFFFF;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help</a>
-                            <div class="dropdown-menu dropdown-menu-end" style="background-color: #735240;"  aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" style="text-align:center; color: #FFFFFF; " href="{{ route('sizing_guide') }}">
-                                    Sizing Guide
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle content-font" style=" color: #B48264  ;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>HELP</a>
+                            <div class="dropdown-menu dropdown-menu-end" style="background-color: #B48264 ;"  aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" style="text-align:center; color: #ffff  ; " href="{{ route('sizing_guide') }}">
+                                    SIZING GUIDE
                                 </a>
-                                <a class="dropdown-item" style="text-align:center; color: #FFFFFF;" href="{{ route('shipping') }}">
-                                    Shipping & Delivery
+                                <a class="dropdown-item" style="text-align:center; color: #ffff  ;" href="{{ route('shipping') }}">
+                                    SHIPPING & DELIVERY
                                 </a>
-                                <a class="dropdown-item" style="text-align:center; color: #FFFFFF;" href="{{ route('sizing_guide') }}">
-                                    Return Policy
+                                <a class="dropdown-item" style="text-align:center; color: #ffff  ;" href="{{ route('return_policy') }}">
+                                    RETURN POLICY
                                 </a>
                             </div>
                         </li>
@@ -142,18 +150,18 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: #FFFFFF;" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" style="color: #B48264  ;" href="{{ route('login') }}">{{ __('LOGIN') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: #FFFFFF;" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" style="color: #B48264  ;" href="{{ route('register') }}">{{ __('REGISTER') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: #FFFFFF;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: #B48264  ;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 

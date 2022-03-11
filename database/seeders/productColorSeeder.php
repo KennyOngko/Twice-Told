@@ -14,19 +14,15 @@ class productColorSeeder extends Seeder
     public function run()
     {
         DB::table('product_colors')->insert([
-            ["product_id"=>'1', "color_name"=>'white','color_code'=>''],
-            ["product_id"=>'1', "color_name"=>'blue','color_code'=>''],
-            ["product_id"=>'1', "color_name"=>'red' ,'color_code'=>''],
-            ["product_id"=>'1', "color_name"=>'black' ,'color_code'=>''],
-
-            ["product_id"=>'2', "color_name"=>'yellow','color_code'=>''],
-            ["product_id"=>'2', "color_name"=>'blue','color_code'=>''],
-            ["product_id"=>'2', "color_name"=>'red' ,'color_code'=>''],
+            ["product_id"=>'1', "color_name"=>'dusty pink','color_code'=>'#c86d4a'],
+            ["product_id"=>'1', "color_name"=>' terracotta','color_code'=>'#cca8a4'],
 
 
-            ["product_id"=>'3', "color_name"=>'pink','color_code'=>''],
-            ["product_id"=>'3', "color_name"=>'blue','color_code'=>''],
-            ["product_id"=>'3', "color_name"=>'red' ,'color_code'=>''],
+            ["product_id"=>'2', "color_name"=>'pebble grey','color_code'=>'#64693c'],
+            ["product_id"=>'2', "color_name"=>'forest','color_code'=>'#898272'],
+
+
+
         ]);
     }
 }

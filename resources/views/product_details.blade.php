@@ -9,9 +9,12 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
       <!-- Fonts -->
-      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+      {{-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
       <link rel="dns-prefetch" href="//fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Hubballi" rel="stylesheet"> --}}
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
       <!-- Scripts -->
       <script src="{{ asset('js/app.js') }}" defer></script>
       <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
@@ -166,6 +169,9 @@
             .carousel-item img {
                 height:300px !important;
             }
+            .box-diskripsi{
+                width: 100% !important;
+            }
         }
 
         .carousel-inner img {
@@ -215,6 +221,7 @@
         }
         .box-diskripsi{
             padding-left: 2%;
+            width: 40%;
         }
         .list-inline-item{
             width: 20%;
@@ -311,14 +318,99 @@
         .dropdown-item:hover, .dropdown-item:focus{
             background-color: #B48264 !important;
         }
+        .content-font{
+            font-size: 12pt;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            align-self: center;
+        }
+        .menu-utama{
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .footer-bottom {
+            background-image: url("img/footer.jpg");
+            background-repeat:no-repeat;
+            background-size: 100%;
+            width: 100%;
+            text-align: center;
+        }
+        .whats-app {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            bottom: 5px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            right: 10px;
+            z-index: 100;
+            display: flex;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+
+        .my-float {
+            margin-top: 10px;
+        }
+
+        @media (max-width:400px){
+            .content-font{
+                padding-left: 0;
+                margin-left: 0;
+                font-size: 0.85rem;
+                width: 50%;
+            }
+            .button-footer{
+                width: 30% !important;
+            }
+            .footer-content1{
+                font-size: 20pt !important;
+            }
+            .footer-content2{
+                font-size: 10pt !important;
+            }
+            .phone-number{
+                font-size: 12pt !important;
+                text-align: center !important;
+            }
+            .logo{
+                width: 170% !important;
+            }
+        }
+        .navbar{
+            background-color: antiquewhite !important;   
+        }
+        .footer-phone{
+            font-size: 20pt;
+        }
+        .footer-phone:hover{
+            color:#D2B48C !important;
+            
+        }
+        .dropdown-item:hover, .dropdown-item:focus{
+            background-color: #D2B48C  !important;
+        }
+        .logo{
+            width: 50%;
+        }
       </style>
     <title>About US</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-light shadow-sm " style="min-height: 6rem; ">
         <div class="container" style="max-width: 100%;">
-            <a class="navbar-brand" style="width:12%; text-align:center; color: #FFFFFF;" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+            <a class="navbar-brand" style="width:12%; text-align:center; color: #B48264 ;" href="{{ url('/') }}">
+                <img class="logo" src="img/logo.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
@@ -327,20 +419,20 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav me-auto menu-utama">
-                    <a class="content-font" style="color: #FFFFFF;" href="{{route('about_us')}}">About Us</a>
-                    <a class="content-font" style="color: #FFFFFF;" href="{{route('product')}}">Product</a>
-                    <a class="content-font" style="color: #FFFFFF;" href="{{route('discussion_list')}}">Forum</a>
+                    <a class="content-font" style="color: #B48264  ;" href="{{route('about_us')}}">ABOUT US</a>
+                    <a class="content-font" style="color: #B48264  ;" href="{{route('product')}}">PRODUCT</a>
+                    <a class="content-font" style="color: #B48264  ;" href="{{route('discussion_list')}}">FORUM</a>
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle content-font" style=" color: #FFFFFF;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Help</a>
-                        <div class="dropdown-menu dropdown-menu-end" style="background-color: #735240;"  aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" style="text-align:center; color: #FFFFFF; " href="{{ route('sizing_guide') }}">
-                                Sizing Guide
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle content-font" style=" color: #B48264  ;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>HELP</a>
+                        <div class="dropdown-menu dropdown-menu-end" style="background-color: #B48264 ;"  aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" style="text-align:center; color: #ffff  ; " href="{{ route('sizing_guide') }}">
+                                SIZING GUIDE
                             </a>
-                            <a class="dropdown-item" style="text-align:center; color: #FFFFFF;" href="{{ route('shipping') }}">
-                                Shipping & Delivery
+                            <a class="dropdown-item" style="text-align:center; color: #ffff  ;" href="{{ route('shipping') }}">
+                                SHIPPING & DELIVERY
                             </a>
-                            <a class="dropdown-item" style="text-align:center; color: #FFFFFF;" href="{{ route('sizing_guide') }}">
-                                Return Policy
+                            <a class="dropdown-item" style="text-align:center; color: #ffff  ;" href="{{ route('return_policy') }}">
+                                RETURN POLICY
                             </a>
                         </div>
                     </li>
@@ -353,18 +445,18 @@
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item">
-                                <a class="nav-link" style="color: #FFFFFF;" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" style="color: #B48264  ;" href="{{ route('login') }}">{{ __('LOGIN') }}</a>
                             </li>
                         @endif
 
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" style="color: #FFFFFF;" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" style="color: #B48264  ;" href="{{ route('register') }}">{{ __('REGISTER') }}</a>
                             </li>
                         @endif
                     @else
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: #FFFFFF;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: #B48264  ;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
 
@@ -423,7 +515,7 @@
                 <h6 class="color-title" style="padding-top:2%; ">Available Color</h6>
                 <div class="color-box" style="display: flex; gap:0.25rem; padding-bottom:3%;">
                     @foreach ($value->datacolor as $warna)
-                            <div style="border:solid 1px; background-color:{{$warna->color_name}}; width:25px; height:25px;"></div>
+                            <div style="border:solid 1px; background-color:{{$warna->color_code}}; width:25px; height:25px;"></div>
                     @endforeach
                 </div>
                 <h6 class="color-title" style="padding-top:2%; ">Available Size</h6>

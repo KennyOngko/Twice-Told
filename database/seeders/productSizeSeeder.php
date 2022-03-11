@@ -17,6 +17,10 @@ class productSizeSeeder extends Seeder
             ["product_id"=>'1','size'=>'S' ],
             ["product_id"=>'1','size'=>'M' ],
             ["product_id"=>'1','size'=>'L' ],
+
+            ["product_id"=>'2','size'=>'S' ],
+            ["product_id"=>'2','size'=>'M' ],
+            ["product_id"=>'2','size'=>'L' ],
         ]);
     }
 }

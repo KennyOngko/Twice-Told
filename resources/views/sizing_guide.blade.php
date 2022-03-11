@@ -183,20 +183,8 @@
             </div>
         </div>
     </div>
-    <div style="display: flex; align-items:center; padding-top:5%; flex-direction:column;">
-        <div class="judul-content">RETURN POLICY</div>
-        <div style="display:flex; width:100%; justify-content:center; padding-bottom:2%;">
-                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
-                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
-                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
-        </div>
-        <div class="content-shipping">
-            <ul style="text-align: justify;">
-                <li class="content-li">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit inventore, voluptatem vitae expedita, cumque animi nisi laudantium quas commodi debitis facilis odit. Distinctio, excepturi odio! Quasi eveniet accusamus ut amet.</li>
-                <li class="content-li">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi quam assumenda deleniti sunt mollitia, eveniet sit id dignissimos animi officiis dicta, et debitis at in nesciunt nostrum culpa iure ducimus?</li>
-                <li class="content-li">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, hic, a sapiente atque aut nobis ipsum consequatur temporibus ratione, vel maiores. Nulla quasi reprehenderit atque ut, omnis enim eos sed?</li>
-            </ul>
-        </div>
+    <div style="display: flex; justify-content:center">
+        <img class="imagesize" src="img/size.png" alt="">
     </div>
     @endsection
 </body>
@@ -205,7 +193,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){
-    $(".preloader").fadeOut();
+        $(".preloader").fadeOut();
     })
 </script>
 </html>
