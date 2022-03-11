@@ -12,6 +12,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
 
+
     <!-- Fonts -->
 
     @yield('css')

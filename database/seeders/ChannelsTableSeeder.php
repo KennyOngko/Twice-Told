@@ -14,7 +14,7 @@ class ChannelsTableSeeder extends Seeder
      */
     public function run()
     {
-        $channels = ['Laravel 6.2', 'React 16.2', 'Typescript 3.7', 'Node.js 13.6'];
+        $channels = ['PRICE', 'SIZE', 'SHIPPING', 'RERTUN POLICY'];
 
         foreach ($channels as $channel) {
             Channel::create([
