@@ -21,15 +21,16 @@ Route::get('/', function () {
 
 Route::get('/about_us', [App\Http\Controllers\aboutController::class, 'about_us'])->name('about_us');
 
-Route::get('/product', [App\Http\Controllers\productController::class, 'getdataProduct'])->name('product'); 
+Route::get('/product', [App\Http\Controllers\productController::class, 'getdataProduct'])->name('product');
 Route::get('/product_details', [App\Http\Controllers\productController::class, 'getdatadetailsproduct'])->name('product_details');
 Route::get('/size_guide', [App\Http\Controllers\sizeController::class, 'sizingpage'])->name('sizing_guide');
 Route::get('/return_policy', [App\Http\Controllers\returnController::class, 'returnpage'])->name('return_policy');
 Route::get('/shipping', [App\Http\Controllers\shippingController::class, 'shippingpage'])->name('shipping');
 Route::get('/discussion_list',[App\Http\Controllers\DiscustionController::class, 'index'])->name('discussion_list');
 Route::get('/discussion_create',[App\Http\Controllers\DiscustionController::class, 'discussion_create'])->name('discussion_create');
-Route::get('/replies',[App\Http\Controllers\DiscustionController::class, 'replies'])->name('replies');
+Route::get('/replies/{slug}',[App\Http\Controllers\DiscustionController::class, 'replies'])->name('replies');
 Route::put('/makeDiscussion',[App\Http\Controllers\DiscustionController::class, 'makeDiscussion'])->name('makeDiscussion');
+Route::post('/makeReply/{slug}',[App\Http\Controllers\DiscustionController::class, 'makeReply'])->name('makeReply');
 
 Auth::routes();
 Route::group(['middleware'=>'member'], function() {

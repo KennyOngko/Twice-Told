@@ -39,19 +39,29 @@
 
         /* Track */
         ::-webkit-scrollbar-track {
-        background: #f1f1f1; 
+        background: #f1f1f1;
         }
-        
+
         /* Handle */
         ::-webkit-scrollbar-thumb {
-        background: #D2B48C ; 
+        background: #D2B48C ;
         border-radius: 10px;
         }
 
         /* Handle on hover */
         ::-webkit-scrollbar-thumb:hover {
-        background: #D2B48C ; 
+        background: #D2B48C ;
         border-radius: 10px;
+        }
+
+        .list-group a:hover li, .list-group a:focus li{
+            background-color: gray;
+            color: white;
+        }
+
+        .list-group a .show{
+            background-color: gray;
+            color: white;
         }
     </style>
 </head>
@@ -82,13 +92,17 @@
                     <div class="card-body">
                         <ul class="list-group">
                             @foreach ($channels as $value)
-                                <li class="list-group-item">{{$value->name}}</li>
+                                <a
+                                href="@if($category == $value->slug) {{route('discussion_list')}} @else {{route('discussion_list',['category'=>$value->slug])}} @endif"
+                                style="text-decoration: none">
+                                    <li class="list-group-item @if($category == $value->slug) show @endif">{{$value->name}}</li>
+                                </a>
                             @endforeach
                         </ul>
                     </div>
                 </div>
             </div>
-    
+
                 <div class=" col-md-8" style="height: 500px; overflow-y:scroll; ">
                     <div class="d-flex" style="justify-content:flex-end; padding-top:10px;">
                         <input class="border mb-3 mfliud" style="border-radius:5px; width:50%;" type="text" id="search" placeholder="Search.." name="search">
@@ -100,23 +114,23 @@
                                 <div>
                                     <strong class="ml-2 text-uppercase">{{$value->name}}</strong>
                                 </div>
-                    
+
                                 <div>
-                                    <a href="{{ route('discussion_list') }}"
+                                    <a href="{{ route('replies',$value->slug) }}"
                                     class="btn btn-success btn-sm">View</a>
                                 </div>
                             </div>
                         </div>
-                    
+
                         <div id="title_diskusi" class="card-body">
                             {!! $value->title !!}
                         </div>
                     </div>
                     @endforeach
-                </div> 
+                </div>
 
         </div>
-    </div> 
+    </div>
 <script>
     	document.getElementById('search').addEventListener('input', function(){
 		document.querySelectorAll('.list_diskusi').forEach(function(product){
