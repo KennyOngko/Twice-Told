@@ -166,8 +166,8 @@
             font-size: 30pt;
         }
         .content-li{
-            padding: 1%;
-            font-size: 12pt;
+            padding: 0.5%;
+            font-size: 1.25rem;
         }
       </style>
     <title>About US</title>
@@ -185,16 +185,19 @@
     </div>
     <div style="display: flex; align-items:center; padding-top:5%; flex-direction:column;">
         <div class="judul-content">RETURN POLICY</div>
-        <div style="display:flex; width:100%; justify-content:center; padding-bottom:2%;">
-                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
-                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
-                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
+        <div style="display:flex; width:70%; justify-content:center; padding-bottom:2%;">
+            <img src="img/return 1.jpg" style="width: 100%; height:400px; object-fit:cover; object-position:top;" alt="">
         </div>
-        <div class="content-shipping">
-            <ul style="text-align: justify;">
-                <li class="content-li">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit inventore, voluptatem vitae expedita, cumque animi nisi laudantium quas commodi debitis facilis odit. Distinctio, excepturi odio! Quasi eveniet accusamus ut amet.</li>
-                <li class="content-li">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi quam assumenda deleniti sunt mollitia, eveniet sit id dignissimos animi officiis dicta, et debitis at in nesciunt nostrum culpa iure ducimus?</li>
-                <li class="content-li">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, hic, a sapiente atque aut nobis ipsum consequatur temporibus ratione, vel maiores. Nulla quasi reprehenderit atque ut, omnis enim eos sed?</li>
+        <div class="content-shipping" style="justify-content: center; display:flex; width:100%">
+            <ul style="text-align: justify; width:70%;">
+                <li class="content-li">ALL ITEMS ARE DELIVERED FROM OUR WAREHOUSE IN BEKASI</li>
+                <li class="content-li">At TWICE-TOLD, we do quality control to all of our times to ensure that they are in the perfect condition before we send them
+                    Before purchase, we recommend viewing our detailed size chart to make sure the size.</li>
+                <li class="content-li">Items can be returned for size exchange only
+                    For request of an exchange, please contact us immediately via one of our official contact</li>
+                <li class="content-li">Returns must be informed to us and sent back to us within 1x24 hours
+                    You also need to include your order number, invoice, and tell us what you wish to return
+                    Exchange items shipping fee will be charged to you when requesting an exchange</li>
             </ul>
         </div>
     </div>

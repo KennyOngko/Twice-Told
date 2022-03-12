@@ -19,6 +19,6 @@ class Member
     {
         if(Auth::check() && Auth::user()->role == 'member')
             return $next($request);
-        return redirect()->route('home');
+        return redirect()->route('welcome');
     }
 }

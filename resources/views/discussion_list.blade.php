@@ -87,15 +87,15 @@
                 @endauth
 
                 {{-- catagory --}}
-                <div class="card">
-                    <div class="card-header">Catagory</div>
+                <div class="card" style="background-color: #B48264;">
+                    <div class="card-header" style="color:white;">Catagory</div>
                     <div class="card-body">
-                        <ul class="list-group">
+                        <ul class="list-group" style="border-radius: 10px;">
                             @foreach ($channels as $value)
-                                <a
+                                <a 
                                 href="@if($category == $value->slug) {{route('discussion_list')}} @else {{route('discussion_list',['category'=>$value->slug])}} @endif"
-                                style="text-decoration: none">
-                                    <li class="list-group-item @if($category == $value->slug) show @endif">{{$value->name}}</li>
+                                style="text-decoration: none;">
+                                    <li class="list-group-item @if($category == $value->slug) show @endif" style="background-color:#D2B48C">{{$value->name}}</li>
                                 </a>
                             @endforeach
                         </ul>

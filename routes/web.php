@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 
 Route::get('/about_us', [App\Http\Controllers\aboutController::class, 'about_us'])->name('about_us');
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/product', [App\Http\Controllers\productController::class, 'getdataProduct'])->name('product');
 Route::get('/product_details', [App\Http\Controllers\productController::class, 'getdatadetailsproduct'])->name('product_details');
 Route::get('/size_guide', [App\Http\Controllers\sizeController::class, 'sizingpage'])->name('sizing_guide');
@@ -39,5 +39,5 @@ Route::group(['middleware'=>'member'], function() {
 });
 
 Route::group(['middleware'=>'admin'], function() {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 });

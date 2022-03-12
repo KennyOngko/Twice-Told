@@ -108,8 +108,8 @@
             font-size: 30pt;
         }
         .content-li{
-            padding: 1%;
-            font-size: 12pt;
+            padding: 0.5%;
+            font-size: 1.5rem;
         }
       </style>
     <title>About US</title>
@@ -127,16 +127,14 @@
     </div>
     <div style="display: flex; align-items:center; padding-top:5%; flex-direction:column;">
         <div class="judul-content">SHIPPING & DELIVERY</div>
-        <div style="display:flex; width:100%; justify-content:center; padding-bottom:2%;">
-                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
-                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
-                <img src="img/test.jpg" style="width: 25%; height:400px;" alt="">
+        <div style="display:flex; width:70%; justify-content:center; padding-bottom:2%;">
+                <img src="img/shipping 1.jpg" style="width: 100%; height:400px; object-fit:cover;" alt="">
         </div>
-        <div class="content-shipping">
-            <ul style="text-align: justify;">
-                <li class="content-li">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit inventore, voluptatem vitae expedita, cumque animi nisi laudantium quas commodi debitis facilis odit. Distinctio, excepturi odio! Quasi eveniet accusamus ut amet.</li>
-                <li class="content-li">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi quam assumenda deleniti sunt mollitia, eveniet sit id dignissimos animi officiis dicta, et debitis at in nesciunt nostrum culpa iure ducimus?</li>
-                <li class="content-li">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, hic, a sapiente atque aut nobis ipsum consequatur temporibus ratione, vel maiores. Nulla quasi reprehenderit atque ut, omnis enim eos sed?</li>
+        <div class="content-shipping" style="justify-content: center; display:flex; width:100%">
+            <ul style="text-align: justify; width:70%;">
+                <li class="content-li">Your order will be delivered within 24 hours of our office hours. Please allow our team to prepare and pack your orders</li>
+                <li class="content-li">All regular orders can be shipped with JNE, SiCepat, JNT, or AnterAja, except you are requesting to ship your orders by Grab or Gojek Delivery.</li>
+                <li class="content-li">Shipment are closed at 4PM. All orders above 4PM will be shipped out tomorrow</li>
             </ul>
         </div>
     </div>

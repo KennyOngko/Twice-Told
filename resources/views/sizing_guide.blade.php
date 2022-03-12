@@ -183,8 +183,8 @@
             </div>
         </div>
     </div>
-    <div style="display: flex; justify-content:center">
-        <img class="imagesize" src="img/size.png" alt="">
+    <div style="display: flex; justify-content:center; padding-top:10%; padding-bottom:10%;">
+        <img class="imagesize" src="img/comming soon.png" alt="">
     </div>
     @endsection
 </body>
