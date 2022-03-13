@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 <style>
-    @media (max-width:400px){
+    @media (max-width:485px){
         .register-container{
             height:70vh !important;
         }

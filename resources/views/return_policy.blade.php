@@ -82,7 +82,7 @@
             transform: translate(-50%,-50%);
             font: 14px arial;
         }
-        @media (max-width:400px){
+        @media (max-width:485px){
             .content-about-us{
                 width:80%;
             }
@@ -140,7 +140,7 @@
             transform: translate(-50%,-50%);
             font: 14px arial;
         }
-        @media (max-width:400px){
+        @media (max-width:485px){
             .content-about-us{
                 width:80%;
             }
@@ -161,6 +161,16 @@
             .judul-content{
                 font-size: 15pt !important;
             }
+            .img-return{
+                height:auto !important; 
+            }
+            .content-li{
+                padding-top: 2% !important;
+                font-size: 1rem !important;
+            }
+            .content-bawah{
+                width:90% !important;
+            }
         }
         .judul-content{
             font-size: 30pt;
@@ -168,6 +178,16 @@
         .content-li{
             padding: 0.5%;
             font-size: 1.25rem;
+        }
+        .img-return{
+            width: 100%; 
+            height:400px; 
+            object-fit:cover; 
+            object-position:top;
+        }
+        .content-bawah{
+            text-align: justify; 
+            width:70%;
         }
       </style>
     <title>About US</title>
@@ -186,10 +206,10 @@
     <div style="display: flex; align-items:center; padding-top:5%; flex-direction:column;">
         <div class="judul-content">RETURN POLICY</div>
         <div style="display:flex; width:70%; justify-content:center; padding-bottom:2%;">
-            <img src="img/return 1.jpg" style="width: 100%; height:400px; object-fit:cover; object-position:top;" alt="">
+            <img class="img-return" src="img/return 1.jpg" alt="">
         </div>
         <div class="content-shipping" style="justify-content: center; display:flex; width:100%">
-            <ul style="text-align: justify; width:70%;">
+            <ul class="content-bawah">
                 <li class="content-li">ALL ITEMS ARE DELIVERED FROM OUR WAREHOUSE IN BEKASI</li>
                 <li class="content-li">At TWICE-TOLD, we do quality control to all of our times to ensure that they are in the perfect condition before we send them
                     Before purchase, we recommend viewing our detailed size chart to make sure the size.</li>

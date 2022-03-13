@@ -82,7 +82,7 @@
             transform: translate(-50%,-50%);
             font: 14px arial;
         }
-        @media (max-width:400px){
+        @media (max-width:485px){
             .content-about-us{
                 width:80%;
             }
@@ -103,6 +103,17 @@
             .judul-content{
                 font-size: 15pt !important;
             }
+            .img-shipping{
+                height:100% !important; 
+                object-fit:contain !important;
+            }
+            .content-li{
+                font-size: 1rem !important;
+                padding-top: 2% !important;
+            }
+            .content-bawah{
+                width:90% !important;
+            }
         }
         .judul-content{
             font-size: 30pt;
@@ -111,6 +122,15 @@
             padding: 0.5%;
             font-size: 1.5rem;
         }
+        .img-shipping{
+            width: 100%; 
+            height:400px; 
+            object-fit:cover;
+        }
+        .content-bawah{
+            text-align: justify; 
+            width:70%;
+        }
       </style>
     <title>About US</title>
 </head>
@@ -118,20 +138,20 @@
     @extends('layouts.app')
 
     @section('content')
-    <div class="preloader">
+    {{-- <div class="preloader">
         <div class="loading">
             <div class="spinner-grow" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div style="display: flex; align-items:center; padding-top:5%; flex-direction:column;">
         <div class="judul-content">SHIPPING & DELIVERY</div>
         <div style="display:flex; width:70%; justify-content:center; padding-bottom:2%;">
-                <img src="img/shipping 1.jpg" style="width: 100%; height:400px; object-fit:cover;" alt="">
+                <img class="img-shipping" src="img/shipping 1.jpg" alt="">
         </div>
         <div class="content-shipping" style="justify-content: center; display:flex; width:100%">
-            <ul style="text-align: justify; width:70%;">
+            <ul class="content-bawah">
                 <li class="content-li">Your order will be delivered within 24 hours of our office hours. Please allow our team to prepare and pack your orders</li>
                 <li class="content-li">All regular orders can be shipped with JNE, SiCepat, JNT, or AnterAja, except you are requesting to ship your orders by Grab or Gojek Delivery.</li>
                 <li class="content-li">Shipment are closed at 4PM. All orders above 4PM will be shipped out tomorrow</li>

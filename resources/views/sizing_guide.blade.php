@@ -82,7 +82,7 @@
             transform: translate(-50%,-50%);
             font: 14px arial;
         }
-        @media (max-width:400px){
+        @media (max-width:485px){
             .content-about-us{
                 width:80%;
             }
@@ -140,7 +140,7 @@
             transform: translate(-50%,-50%);
             font: 14px arial;
         }
-        @media (max-width:400px){
+        @media (max-width:485px){
             .content-about-us{
                 width:80%;
             }

@@ -9,7 +9,7 @@
     <meta name="csrf-token"
           content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'TWICE TOLD') }}</title>
 
 
 
@@ -29,10 +29,20 @@
         .btn-info {
             color: #FFF!important;
         }
-        @media (max-width:400px){
+        @media (max-width:485px){
             trix-toolbar{
                 overflow: scroll !important;
             }
+        }
+        .box-create-disccuss{
+            display: flex; 
+            justify-content:center; 
+            padding-bottom:5%; 
+            padding-top:5%;
+        }
+        .btn-success{
+            background-color: #D2B48C !important; 
+            border-color: #D2B48C !important;
         }
     </style>
 </head>
@@ -41,10 +51,10 @@
     @extends('layouts.app')
 
     @section('content')
-    <div style="display: flex; justify-content:center; padding-bottom:5%; padding-top:5%;">
+    <div class="box-create-disccuss">
     <div class="card" style="width: 80%;">
-        <div class="card-header">Add Discussion</div> 
-            <div class="card-body">
+        <div class="card-header" style="background-color:antiquewhite;">Add Discussion</div> 
+            <div class="card-body" style="background-color:cornsilk; border:solid palegoldenrod;">
                 <form  method="post" action="{{ route('makeDiscussion') }}">
                     @csrf
                     @method('PUT')

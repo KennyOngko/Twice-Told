@@ -83,7 +83,7 @@
             transform: translate(-50%,-50%);
             font: 14px arial;
         }
-        @media (max-width:400px){
+        @media (max-width:485px){
             .content-about-us{
                 width:80%;
             }
@@ -161,7 +161,7 @@
             margin-top: 10px;
         }
 
-        @media (max-width:400px){
+        @media (max-width:485px){
             .content-font{
                 padding-left: 0;
                 margin-left: 0;
@@ -289,13 +289,10 @@
         <div class="content-about-us">
             <h1 style="color: white">Story of Twice Told</h1>
             <p style="color: white">
-                Represent a state of being calm, peaceful, and untroubled. Achieving this positive state of mind means you won’t feel as troubled by life’s ups and downs. While addiction often brings chaos, a loss of control, and emotional turmoil, serenity will help you stay calm and true to yourself.            
+                TWICE-TOLD is a startup business engaged in the kids fashion industry, which was founded in 2021, is here for millennial moms who are looking for children's clothing with contemporary, versatile designs, quality, soft materials, and carries the concept of sustainability.            
             </p>
             <p style="color: white">
-                Serene Candle was built to help pamper ourselves, remember the importance of self-love because all activities we do start from ourselves. Self Healing is very important. When our soul & body are healthy, our activities and thoughts will be better.
-            </p>
-            <p style="color: white">
-                The goal is to make candles / other fragrances for people to relax more & also make the room more aesthetic
+                We strive to understand the desire of children, namely that comfortable clothes to live their daily lives happily. What they wear deserves more attention, especially when parents want to give the best for their children. Therefore, we pay great attention to the manufacture of our clothes starting from the smallest details. Each element is carefully selected and considered and carefully sewn with love. Your comfort matters to us.
             </p>
         </div>
     </div>

@@ -10,7 +10,7 @@
     <meta name="csrf-token"
           content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'TWICE TOLD') }}</title>
 
 
     <!-- Fonts -->
@@ -63,6 +63,10 @@
             background-color: gray;
             color: white;
         }
+        .btn-success{
+            background-color: #D2B48C !important; 
+            border-color: #D2B48C !important;
+        }
     </style>
 </head>
 
@@ -76,13 +80,13 @@
                 @auth
                 <div class="mb-2">
                     <a href="{{ route('discussion_create') }}"
-                        class="btn btn-info btn-block">Create Discussion</a>
+                        class="btn btn-success">Create Discussion</a>
                 </div>
                 @else
 
                 <div class="mb-2">
                     <a href="{{ route('login') }}"
-                        class="btn btn-info btn-block">Sign in to discussion</a>
+                        class="btn btn-success">Create Discussion</a>
                 </div>
                 @endauth
 
@@ -109,7 +113,7 @@
                     </div>
                     @foreach ($discussions as $value )
                     <div class="card col-md-12 list_diskusi" style="margin-bottom:2%; 0; height:100px; ">
-                        <div class="card-header">
+                        <div class="card-header" style="background-color: antiquewhite">
                             <div class="d-flex justify-content-between align-content-center">
                                 <div>
                                     <strong class="ml-2 text-uppercase">{{$value->name}}</strong>
@@ -122,7 +126,7 @@
                             </div>
                         </div>
 
-                        <div id="title_diskusi" class="card-body">
+                        <div id="title_diskusi" class="card-body" style="background-color:cornsilk; border:solid palegoldenrod; ">
                             {!! $value->title !!}
                         </div>
                     </div>

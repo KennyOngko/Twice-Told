@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'TWICE TOLD') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -37,7 +37,7 @@
         }
 
         .footer-bottom {
-            background-image: url("img/footer.jpg");
+            background-image: url("../img/footer.jpg");
             background-repeat:no-repeat;
             background-size: 100%;
             width: 100%;
@@ -68,7 +68,7 @@
             margin-top: 10px;
         }
 
-        @media (max-width:400px){
+        @media (max-width:485px){
             .content-font{
                 padding-left: 0;
                 margin-left: 0;
@@ -115,7 +115,7 @@
         <nav class="navbar navbar-expand-md navbar-light shadow-sm " style="min-height: 6rem; ">
             <div class="container" style="max-width: 100%;">
                 <a class="navbar-brand" style="width:12%; text-align:center; color: #B48264 ;" href="{{ url('/') }}">
-                    <img class="logo" src="img/logo.png" alt="">
+                    <img class="logo" src="../img/logo.png" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -124,9 +124,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto menu-utama">
-                        <a class="content-font" style="color: #B48264  ;" href="{{route('about_us')}}">ABOUT US</a>
-                        <a class="content-font" style="color: #B48264  ;" href="{{route('product')}}">PRODUCT</a>
-                        <a class="content-font" style="color: #B48264  ;" href="{{route('discussion_list')}}">FORUM</a>
+                        <a class="content-font" style="color: #B48264;" href="{{route('about_us')}}">ABOUT US</a>
+                        <a class="content-font" style="color: #B48264;" href="{{route('product')}}">PRODUCT</a>
+                        <a class="content-font" style="color: #B48264;" href="{{route('discussion_list')}}">FORUM</a>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle content-font" style=" color: #B48264  ;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>HELP</a>
                             <div class="dropdown-menu dropdown-menu-end" style="background-color: #B48264 ;"  aria-labelledby="navbarDropdown">
@@ -193,20 +193,20 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-12 col-md-12 text-center">
-                            <p class="mb-0 footer-content1" style="font-size: 30pt; color:#F5F3F0;">Plan to buy Our Products</p>
+                            <p class="mb-0 footer-content1" style="font-size: 30pt; color:#F5F3F0;">Get in Touch With Us</p>
                         </div>
                         <div class="col-lg-12 col-md-12 text-center">
                             <p class="mb-0 footer-content2" style="font-size: 12pt; color:#F5F3F0;">You Can Reach Us If You Are Intersted In Our Product Here</p>
                         </div>
                         <div class="col-lg-12 col-md-12 text-center" style="padding-top: 10px; padding-bottom:10px;">
-                            <button style="width:10%; height:3rem; border:none;" class="button-footer">
-                                <a href="" style="text-decoration:none; color:#B48264;">OUR PRODUCT</a>
-                            </button>
+                            <a href=""  style="text-decoration:none;">
+                                <button style="width:9%; height:2.5rem; border:none; color:#B48264;" class="button-footer">OUR PRODUCT</button>
+                            </a>
                         </div>
                         <div class="col-lg-12 col-md-12 text-center" style="padding-top: 10px; padding-bottom:10px;">
-                            <button style="width:9%; height:2.5rem; border:none;" class="button-footer">
-                                <a href=""  style="text-decoration:none; color:#B48264;">OUR SHOPEE</a>
-                            </button>
+                            <a href=""  style="text-decoration:none;">
+                                <button style="width:9%; height:2.5rem; border:none; color:#B48264;" class="button-footer">OUR SHOPEE</button>
+                            </a>
                         </div>
                         <div class="col-lg-12 col-md-12 text-center">
                             <p class="mb-0 footer-content2" style="color: #F5F3F0;">OR YOU CAN CONTACT US AT</p>

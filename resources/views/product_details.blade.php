@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'TWICE TOLD') }}</title>
       <!-- Fonts -->
       {{-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
       <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -95,7 +95,7 @@
             transform: translate(-50%,-50%);
             font: 14px arial;
         }
-        @media (max-width:400px){
+        @media (max-width:485px){
             .content-about-us{
                 width:80%;
             }
@@ -141,6 +141,9 @@
             .deskripsi-content{
                 width: 90%;
                 text-align: justify;
+                padding-left: 10%;
+            }
+            .size_guide{
                 padding-left: 10%;
             }
             .botom-foto{
@@ -236,7 +239,7 @@
             font-size: 1.5rem;
         }
         .deskripsi-content{
-            font-size: 12pt;
+            font-size: 10pt;
         }
         .content-font{
             font-size: 12pt;
@@ -284,7 +287,7 @@
             margin-top: 10px;
         }
 
-        @media (max-width:400px){
+        @media (max-width:485px){
             .content-font{
                 padding-left: 0;
                 margin-left: 0;
@@ -363,7 +366,7 @@
             margin-top: 10px;
         }
 
-        @media (max-width:400px){
+        @media (max-width:485px){
             .content-font{
                 padding-left: 0;
                 margin-left: 0;
@@ -526,6 +529,12 @@
                 </div>
                 <h4 class="deskripsi">Description</h4>
                 <p class="deskripsi-content">{{$value->description}}</p>
+                <p class="deskripsi-content">Material : {{$value->material}}</p>
+                <p class="deskripsi-content">Size Guide : {{$value->size_guide}}</p>
+                @foreach ($value->datasize as $size )
+                    <div class="size_guide">{{$size->size_old}}{{$size->size_name}}{{$size->size_detail}}</div>
+                @endforeach
+                <p class="deskripsi-content" style="padding-top: 2%">*Free reuseable pouch for every purchases</p>
             @endforeach
         </div>
     </div>

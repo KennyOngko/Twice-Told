@@ -19,6 +19,8 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->string('gambar')->nullable();
             $table->bigInteger('price');
+            $table->string('material');
+            $table->string('size_guide');
             $table->timestamps();
         });
     }

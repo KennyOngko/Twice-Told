@@ -207,7 +207,7 @@
             .row{
                 --bs-gutter-x:0.5rem !important;
             }
-            @media (max-width:400px){
+            @media (max-width:485px){
                 section{
                     min-height:50vh;
                 }

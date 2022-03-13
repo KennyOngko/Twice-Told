@@ -10,17 +10,11 @@
     <meta name="csrf-token"
           content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'TWICE TOLD') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"
-            defer></script>
+
 
     <!-- Fonts -->
-    <link rel="dns-prefetch"
-          href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito"
-          rel="stylesheet">
 
     @yield('css')
 
@@ -28,9 +22,8 @@
     <link href="{{ asset('css/app.css') }}"
           rel="stylesheet">
     <link async
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.1/trix.css">
-
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.1/trix.css">
     <style>
         .btn-info {
             color: #FFF!important;
@@ -58,6 +51,10 @@
         background: #D2B48C ;
         border-radius: 10px;
         }
+        .btn-success{
+            background-color: #D2B48C !important; 
+            border-color: #D2B48C !important;
+        }
     </style>
 </head>
 
@@ -69,25 +66,25 @@
         <div class="row justify-content-space-evenly">
             <div class=" col-md" style="height: 500px; overflow-y:scroll; ">
                 <div class="card mb-3">
-                    <div class="card-header">
-                        <div class="d-flex justify-content-between align-content-center">
+                    <div class="card-header"style="background-color:antiquewhite;">
+                        <div class="d-flex justify-content-between align-content-center" >
                             <div>
                                 <strong class="ml-2 text-uppercase">{{$diskusi->author->name}}</strong>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card-body">
+                    <div class="card-body" style="background-color:cornsilk; border:solid palegoldenrod;">
                         <h1>{!!$diskusi->title!!}</h1>
                         <p>{!!$diskusi->content!!}</p>
 
                         @auth
                         <div class="card">
-                            <div class="card-header">
+                            <div class="card-header" style="background-color:antiquewhite;">
                                 Add a reply
                             </div>
 
-                            <div class="card-body">
+                            <div class="card-body" style="background-color:cornsilk; border:solid palegoldenrod;">
                                 <form action="{{route('makeReply',$diskusi->slug)}}" method="post">
                                     @csrf
                                     <input type="hidden" name="content" id="content">
@@ -106,7 +103,7 @@
 
                 @foreach($replies as $reply)
                 <div class="card my-5">
-                    <div class="card-header">
+                    <div class="card-header" style="background-color:antiquewhite;">
                         <div class="d-flex justify-content-between align-content-center">
                             <div>
                                 <strong class="ml-2 text-uppercase">{{$reply->owner->name}}</strong>
@@ -114,7 +111,7 @@
                         </div>
                     </div>
 
-                    <div class="card-body">
+                    <div class="card-body" style="background-color:cornsilk; border:solid palegoldenrod;">
                         <p>{!!$reply->content!!}</p>
                     </div>
                 </div>
